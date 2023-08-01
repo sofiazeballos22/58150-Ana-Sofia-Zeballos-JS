@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Registrarse</title>
+  </head>
+  <body class="comienzo">
+    <header>
+      <div class="encabezado">
+        <div class="titulo2">
+          <h1 class="principal2">Kyros Lenceria</h1>
+        </div>
+        <nav class="nav3">
+          <ul class="listado2">
+            <li class="boton2">
+              <a href="./registrarse.html" target="_top"
+                ><img
+                  src="../image/003-user.png"
+                  alt="logousuario"
+                  style="height: 21px; width: 22px"
+              /></a>
+            </li>
+            <li class="boton2">
+              <a href="./cupones.html"
+                ><img
+                  src="../image/006-coupon.png"
+                  alt="cupones"
+                  style="width: 25px; height: 20px"
+              /></a>
+            </li>
+            <li class="boton2">
+              <a href="./carrito.html"
+                ><img
+                  src="../image/001-shopping-cart.png"
+                  alt="compras"
+                  style="width: 25px; height: 20px"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="marketing">
+        <h3>Envios gratis para compras superiores a 10000!</h3>
+      </div>
+      <nav class="nav4">
+        <ul>
+          <li class="boton1">
+            <a href="/Index.html" target="_top">Inicio</a>
+          </li>
+          <li class="boton1">
+            <a href="./catalogosyprecios.html" target="_top"
+              >Catálogos y precios</a
+            >
+          </li>
+          <li class="boton1">
+            <a href="./ofertas.html" target="_top">Ofertas</a>
+          </li>
+          <li class="boton1">
+            <a href="./ubicacionycontacto.html" target="_top"
+              >Ubicación y contacto</a
+            >
+          </li>
+          <li class="boton1">
+            <a href="./nosotros.html" target="_top">Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3>Registro de Usuario</h3>
+      <form action="/procesar_registro" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="confirm_password">Confirmar Contraseña:</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          required
+        />
+
+        <label for="domicilio">Domicilio</label>
+        <input type="domicilio" name="domicilio" id="domicilio" required />
+
+        <label for="localidad">Localidad</label>
+        <input type="localidad" name="localidad" id="localidad" required />
+
+        <label for="celular">Número de contacto</label>
+        <input type="celular" name="celular" id="celular" required />
+
+        <input type="submit" value="Registrarse" />
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="infodueña">
+        <h4 class="namepag">Kyro's Lenceria</h4>
+        <p class="name">Camila Zeballos</p>
+      </div>
+      <section class="redessociales">
+        <p class="parrafoenlace">
+          Aquí tienes al alcance unos links que te llevaran directo a nuestras
+          redes sociales!
+        </p>
+        <p class="parrafoenlace">
+          Ahí podrás enterarte de los últimos ingresos, nuestros sorteos,
+          descuentos y mucho más!
+        </p>
+        <div class="enlaces">
+          <a
+            href="https://www.facebook.com/anasofia.zeballos.3"
+            target="_blank"
+          >
+            <img
+              src="../image/002-facebook.png"
+              style="width: 30px; height: 30px"
+              alt="logofacebook"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/sofia.zeballos.17/"
+            target="_blank"
+          >
+            <img
+              src="../image/004-instagram.png"
+              style="width: 30px; height: 30px"
+              alt="logointagram"
+            />
+          </a>
+        </div>
+      </section>
+      <div class="floating-button">
+        <a href="https://web.whatsapp.com/" target="_blank">
+          <img
+            class="whatsapp"
+            src="../image/003-whatsapp.png"
+            alt="Whatsapp"
+          />
+        </a>
+        <p>Consultanos al Whatsapp</p>
+      </div>
+      <section class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.269342564612!2d-65.20138802573736!3d-26.799551176714736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d796a405b79%3A0xf2588ff7da88532e!2sbarrio%20los%20pinos!5e0!3m2!1ses!2sar!4v1688843629565!5m2!1ses!2sar"
+          width="250px"
+          height="200px"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p>Encontranos en Barrio los Pinos</p>
+        <p>Ildefonso de las Muñecas 2357, San Miguel de Tucumán</p>
+      </section>
+      <div class="zonadescarga">
+        <p>
+          También puedes descargar nuestro catálogo para mirarlo en cualquier
+          momento del día!
+        </p>
+        <a href="ruta_al_archivo.pdf" download>Descargar CATÄLOGO</a>
+        <img
+          src="../image/001-download-to-storage-drive.png"
+          alt="descargarcatalogo"
+        />
+      </div>
+      <div class="metodopago">
+        <img src="../image/007-visa.png" style="height: 60px" alt="visa" />
+        <img src="../image/mastercard.png" alt="mastercard" />
+        <img src="../image/logoefectivo.png" alt="efectivo" />
+        <img src="../image/icons8-mercado-pago-48.png" alt="mercadopago" />
+      </div>
+    </footer>
+  </body>
+</html>
