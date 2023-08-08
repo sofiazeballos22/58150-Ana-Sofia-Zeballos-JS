@@ -49,6 +49,7 @@ header {
     height: 5rem;
     display: flex;
     justify-content: end;
+    grid-area: nav1;
 }
 
 .nav1 .listado1 {
@@ -187,11 +188,18 @@ header {
     background-color: #9c7580;
 }
 
-.comienzo2 {
+.body-categorias-precios {
     margin: 0%;
     padding: 0%;
     background-color: #eec3c9;
 
+}
+
+.header-categorias-precios {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-areas: "marketing-catalogos-precios marketing-catalogos-precios"
+                        "titulo-categorias nav1"
 }
 
 .titulo2 {
@@ -199,12 +207,6 @@ header {
     height: 5rem;
     display: flex;
     align-items: center;
-}
-
-.encabezado {
-    display: flex;
-    flex-direction: row;
-    background-color: #694a50;
 }
 
 .nav3 {
