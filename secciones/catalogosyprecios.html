@@ -17,36 +17,30 @@
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
     <title>Catálogos y precios</title>
   </head>
-  <body class="comienzo">
+  <body class="body-categorias-precios">
     <header>
-      <div class="encabezado">
-        <div class="titulo2">
-          <h1 class="principal2">Kyros Lenceria</h1>
-        </div>
-        <nav class="nav3">
-          <ul class="listado2">
-            <li class="boton2">
-              <a href="./registrarse.html" target="_top"
-                ><img
-                  src="../image/003-user.png"
-                  alt="logousuario"
-                  style="height: 21px; width: 22px"
+      <div class="titulo">
+        <h1 class="principal">Kyros Lenceria</h1>
+      </div>
+      <div class="encabezado1">
+        <nav class="nav1">
+          <ul class="listado1">
+            <li class="boton">
+              <a href="./secciones/registrarse.html" target="_top"
+                ><img src="../image/003-user.png" alt="logousuario"
+                style="height: 21px; width: 22px;"
               /></a>
             </li>
-            <li class="boton2">
-              <a href="./cupones.html"
-                ><img
-                  src="../image/006-coupon.png"
-                  alt="cupones"
-                  style="width: 25px; height: 20px"
+            <li class="boton">
+              <a href="./secciones/Cupones.html"
+                ><img src="../image/006-coupon.png" alt="cupones"
+                style="width: 25px; height: 20px;"
               /></a>
             </li>
-            <li class="boton2">
-              <a href="./carrito.html"
-                ><img
-                  src="../image/001-shopping-cart.png"
-                  alt="compras"
-                  style="width: 25px; height: 20px"
+            <li class="boton">
+              <a href="./secciones/carrito.html"
+                ><img src="../image/001-shopping-cart.png" alt="compras"
+                style="width: 25px; height: 20px;"
               /></a>
             </li>
           </ul>
@@ -55,51 +49,118 @@
       <div class="marketing">
         <h3>Envios gratis para compras superiores a 10000!</h3>
       </div>
-      <nav class="nav4">
-        <ul>
-          <li class="boton1">
-            <a href="/Index.html" target="_top">Inicio</a>
-          </li>
-          <li class="boton1">
-            <a href="./catalogosyprecios.html" target="_top"
-              >Catálogos y precios</a
-            >
-          </li>
-          <li class="boton1">
-            <a href="./ofertas.html" target="_top">Ofertas</a>
-          </li>
-          <li class="boton1">
-            <a href="./ubicacionycontacto.html" target="_top"
-              >Ubicación y contacto</a
-            >
-          </li>
-          <li class="boton1">
-            <a href="./nosotros.html" target="_top">Nosotros</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="grid-categorias">
-      <div class="nav-categorias">
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              Right-aligned but left aligned when large screen
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-              <li><button class="dropdown-item" type="button">Action</button></li>
-              <li><button class="dropdown-item" type="button">Another action</button></li>
-              <li><button class="dropdown-item" type="button">Something else here</button></li>
-            </ul>
-          </div>
+      <div class="navbar-principal">
+        <nav class="nav2">
+          <ul>
+            <li>
+              <a href="/Index.html" target="_top">Inicio</a>
+            </li>
+            <li>
+              <a href="./secciones/catalogosyprecios.html" target="_top"
+              >Catálogos y precios</a>
+            </li>
+            <li>
+              <a href="./secciones/ofertas.html" target="_top">Ofertas</a>
+            </li>
+            <li>
+              <a href="./secciones/ubicacionycontacto.html" target="_top"
+              >Ubicación y contacto</a>
+            </li>
+            <li>
+              <a href="./secciones/nosotros.html" target="_top">Nosotros</a>
+            </li>
+          </ul>
         </nav>
       </div>
+   </header>
+    <main class="grid-categorias">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Mujeres
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <button class="boton-categoria">Conjuntos</button>
+              <button class="boton-categoria">Trajes de baño</button>
+              <button class="boton-categoria">Medias</button>
+              <button class="boton-categoria">Packs de bombachas</button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Hombres
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <button class="boton-categoria">Boxers</button>
+              <button class="boton-categoria">Medias</button>
+              <button class="boton-categoria">Trajes de baño</button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Niños
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> 
+              <button class="boton-categoria">Boxers</button>
+              <button class="boton-categoria">Medias</button>
+              <button class="boton-categoria">Trajes de baño</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../image/conjunto-baige.jpg" class="card-img-top" alt="conjunto color beige">
+        <div class="card-body">
+          <h5 class="card-title">Marcela Kaury</h5>
+          <p class="card-text">Conjunto Marcela Kaury 70% algodon, 30% lycra</p>
+        </div>
+        <ul class="list-group.list-group-flush">
+          <li class="list-group-item">Talles disponibles</li>
+            <button type="button" class="talles-mujeres">90</button>
+            <button type="button" class="talles-mujeres">105</button>
+            <button type="button" class="talles-mujeres">95</button>
+            <button type="button" class="talles-mujeres">100</button>
+          <li class="list-group-item"> Colores disponibles
+            <button type="button" class="btn btn-primary"></button>
+            <button type="button" class="btn btn-secondary"></button>
+            <button type="button" class="btn btn-success"></button>
+            <button type="button" class="btn btn-danger"></button>
+            <button type="button" class="btn btn-warning"></button>
+          </li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </main>
       <div class="galeria-img">
       </div>
     </main>

@@ -41,8 +41,7 @@ header {
 .titulo {
     grid-area: titulo;
     width: 100%;
-    height: 4rem;
-    justify-items: center;
+    height: 5rem;
 }
 
 .principal {
@@ -61,6 +60,7 @@ header {
     align-items: end;
 }
 
+
 .nav1 .listado1 {
     width: 40%;
     height: 3rem;
@@ -75,6 +75,8 @@ header {
     grid-area: navbar-principal;
     width: 100%;
     height: 4rem;
+    display: flex;
+    justify-content: flex-end;
     background-color: #9c7580;
 }
 
@@ -83,8 +85,7 @@ header {
 }
 
 .nav2 ul {
-    width: 100%;
-    height: 50%;
+    width: 50%;
     list-style: none;
     display: inline-flex;
     align-items: center;
@@ -101,17 +102,7 @@ header {
 .portada {
     margin-top: 2rem;
     width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 3fr;
-    grid-template-areas: "img1 "
-                        "publicidad"
-                        "carrusel";
-    justify-items: center;
-}
-
-.img1 {
-    grid-area: img1;
+    height: 33.60rem;
     display: flex;
     justify-content: center;
     height: 500px;
@@ -164,21 +155,10 @@ header {
 
 .footer {
     margin-top: 70rem;
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-template-rows: 2fr 2fr;
-    grid-area: "redessociales infodueña"
-                "zonadescarga"
-                "mapa mapa";
-    background-color: #926870;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-
-.mapa {
-    grid-area: mapa;
-    justify-self: center;
-   
-}
-
 
 .namepag {
     font-family: 'Bebas Neue', sans-serif;
@@ -187,12 +167,8 @@ header {
 
 .name {
     font-family: 'Courgette', cursive;
-    margin-top: -40px;
 }
 
-.infodueña {
-    order: 2;
-}
 
 .floating-button {
     /* Estilos del botón */
@@ -217,11 +193,24 @@ header {
     justify-content: center;
 }
 
-.comienzo2 {
+.footer {
+    background-color: #9c7580;
+}
+
+
+.body-categorias-precios {
     margin: 0%;
     padding: 0%;
     background-color: #eec3c9;
 
+}
+
+.header-categorias-precios {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-areas: "marketing-catalogos-precios marketing-catalogos-precios"
+        "titulo2 nav3"
+        "nav-secundario-categorias nav-secundario-categorias";
 }
 
 .titulo2 {
@@ -229,21 +218,17 @@ header {
     height: 5rem;
     display: flex;
     align-items: center;
-}
-
-.encabezado {
-    display: flex;
-    flex-direction: row;
-    background-color: #694a50;
+    grid-area: titulo2;
 }
 
 .nav3 {
-    width: 30rem;
+    width: auto;
     height: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: end;
     position: relative;
+    grid-area: nav3;
 }
 
 .nav3 ul {
@@ -256,15 +241,16 @@ header {
     margin-right: 2.10rem;
 }
 
-.nav4 {
+.nav-secundario-categorias {
     background-color: #9c7580;
     width: 100%;
     height: 4rem;
     display: flex;
     justify-content: end;
+    grid-area: nav-secundario-categorias;
 }
 
-.nav4 ul {
+.nav-secundario-categorias ul {
     width: 50%;
     height: 100%;
     list-style: none;
@@ -276,27 +262,35 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-.nav4 ul a {
+.nav-secundario-categorias ul a {
     text-decoration: none;
     color: aliceblue;
 }
 
-.redessociales {
-    width: 30rem;
+/*Modificación de botones de categorias */
+
+.accordion-body {
     display: flex;
     flex-direction: column;
+}
+
+.boton-categoria {
     border-style: none;
-    background: linear-gradient(45deg, #eec3c9, #9c7580, #694a50);
-    background-size: 100%;
-    border-radius: 15px;
-
+    height: 4rem;
 }
 
-.redessociales p {
-    align-items: center;
-    text-align: center;
-    margin-top: -2px;
+.boton-categoria:hover {
+    background-color: #eec3c9;
 }
+
+.talles-mujeres {
+    display: inline-flex;
+    flex-direction: row;
+    border-style: none;
+}
+
+
+
 
 .parrafoenlace {
     font-size: 20px;
@@ -309,24 +303,21 @@ header {
 }
 
 .mapa {
-    width: auto;
-    height: 50%;
+    width: 600px;
+    height: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
     position: absolute;
     margin-left: 43rem;
-    background: blanchedalmond;
+    margin-top: 10px;
 }
 
 .mapa p {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
-    margin-top: -5px;
-    margin-bottom: -5px;
 }
 
 .metodopago {
@@ -343,10 +334,7 @@ header {
 
 }
 
-.nav-categorias {
-    background-color: red;
-}
 
 .galeria-img {
-    background-color: antiquewhite;
+    background-color: rgb(202, 191, 177);
 }
