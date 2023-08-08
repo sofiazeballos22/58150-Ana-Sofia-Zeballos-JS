@@ -5,13 +5,15 @@
 }
 
 .marketing {
+    grid-area: marketing;
     background-color: lightpink;
     order: -1;
-    width: 100%;
-    height: 2.70rem;
+    width: auto;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .marketing h3 {
@@ -20,24 +22,31 @@
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: "marketing marketing"
+        "titulo encabezado1"
+        "navbar-principal navbar-principal";
+
 }
 
 .encabezado1 {
+    grid-area: encabezado1;
     display: flex;
     flex-direction: row;
     background-color: #694a50;
 }
 
 .titulo {
+    grid-area: titulo;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
+    justify-items: center;
 }
 
 .principal {
-    margin-top: 0;
-    height: 100%;
+    height: 50%;
     font-family: 'IBM Plex Serif', serif;
     font-size: 50px;
     display: flex;
@@ -45,14 +54,15 @@ header {
 }
 
 .nav1 {
-    width: 30rem;
-    height: 5rem;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: end;
+    align-items: end;
 }
 
 .nav1 .listado1 {
-    width: 10rem;
+    width: 40%;
     height: 3rem;
     list-style: none;
     display: inline-flex;
@@ -61,21 +71,24 @@ header {
     margin-right: 2.1rem;
 }
 
-.nav2 {
+.navbar-principal {
+    grid-area: navbar-principal;
     width: 100%;
     height: 4rem;
-    display: flex;
-    justify-content: flex-end;
     background-color: #9c7580;
 }
 
+.nav2 {
+    height: 100%;
+}
+
 .nav2 ul {
-    width: 50%;
+    width: 100%;
+    height: 50%;
     list-style: none;
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 2.1rem;
+    justify-content: space-evenly;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -88,34 +101,43 @@ header {
 .portada {
     margin-top: 2rem;
     width: 100%;
-    height: 33.60rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: auto;
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-areas: "img1 "
+                        "publicidad"
+                        "carrusel";
+    justify-items: center;
 }
 
 .img1 {
+    grid-area: img1;
+    display: flex;
+    justify-content: center;
     height: 500px;
-    border: double;
+}
+
+.imagen1_portada {
+    border-style: double;
     border-color: rgb(134, 86, 86);
 }
 
-.img2 {
-    height: 500px;
-    border: double;
+.imagen2_portada {
+    border-style: double;
     border-color: rgb(134, 86, 86);
 }
 
 .carrusel {
+    grid-area: carrusel;
     display: flex;
-    width: 900px;
-    height: 320px;
+    width: 60%;
+    height: 100%;
 }
 
 .carrusel .photo {
     display: flex;
-    width: 10px;
-    flex-grow: 1;
+    width: 1rem;
+    flex-grow: 5;
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
@@ -123,17 +145,18 @@ header {
 
 .carrusel .photo:hover {
     cursor: crosshair;
-    width: 200px;
+    width: 30%;
     opacity: 1;
     filter: contrast(120%);
 }
 
 .publicidad {
+    grid-area: publicidad;
     order: 1.10;
     width: 100%;
-    height: 5rem;
-    margin-top: 33px;
-    margin-bottom: 10px;
+    height: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
     border-style: dotted;
     font-family: Verdana, sans-serif;
@@ -141,10 +164,21 @@ header {
 
 .footer {
     margin-top: 70rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 2fr 2fr;
+    grid-area: "redessociales infodueña"
+                "zonadescarga"
+                "mapa mapa";
+    background-color: #926870;
 }
+
+.mapa {
+    grid-area: mapa;
+    justify-self: center;
+   
+}
+
 
 .namepag {
     font-family: 'Bebas Neue', sans-serif;
@@ -181,10 +215,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.footer {
-    background-color: #9c7580;
 }
 
 .comienzo2 {
@@ -279,21 +309,24 @@ header {
 }
 
 .mapa {
-    width: 600px;
-    height: 200px;
+    width: auto;
+    height: 50%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: absolute;
     margin-left: 43rem;
-    margin-top: 10px;
+    background: blanchedalmond;
 }
 
 .mapa p {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
+    margin-top: -5px;
+    margin-bottom: -5px;
 }
 
 .metodopago {
