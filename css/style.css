@@ -233,12 +233,6 @@ header {
     border: 0;
 }
 
-/* Media query para responsividad */
-@media (max-width: 768px) {
-    .mapa {
-        /* Ajusta los estilos para dispositivos más pequeños */
-    }
-}
 
 .mapa p {
     font-size: 20px;
