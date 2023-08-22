@@ -477,17 +477,33 @@
 
     .menuOfertas {
         grid-area: menuOfertas;
-    
-     }
+        
 
+        .filtros {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+           
+        }
+
+        .is-divider small {
+            height: 10px;
+            background-color: #25d366;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 100%;
+        }
+      
+     }
 
 
      .imgOfertas {
         grid-area: imgOfertas;
         display: flex;
-     }
+        justify-content: space-around;
 
- }
+        }
+
+     }
 
 
   .checkInput {

@@ -85,7 +85,7 @@
     </header>
     <main class="mainOfertas">
       <div class="menuOfertas">
-        <p>Filtrar por color</p>
+        <p class="filtros">Filtrar por color</p>
         <select
           class="form-select form-select-lg mb-3"
           aria-label="Large select example"
@@ -95,7 +95,7 @@
           <option value="2">azul</option>
           <option value="3">rojo</option>
         </select>
-        <p>Filtrar por talle</p>
+        <p class="filtros">Filtrar por talle</p>
         <select
           class="form-select form-select-lg mb-3"
           aria-label="Large select example"
@@ -105,7 +105,8 @@
           <option value="2">85</option>
           <option value="3">105</option>
         </select>
-        <p>Categorías</p>
+        <p class="filtros">Categorías</p>
+        <div class="is-divider small"></div>
         <ul class="checkInput">
           <li>
             <input
@@ -177,15 +178,12 @@
       </div>
 
       <section class="imgOfertas">
-        <div class="card" style="width: 18rem" >
+        <div class="card" style="width: 15rem" >
           <img
             src="../image/conjunto-negro-transparente.jpg"
-            class="conjuntoNegro"
+            class="card-img-top"
             alt="conjunto color beige"
           />
-          <img src="../image/conjunto-baige.jpg"
-          class="imgHover"
-           alt="conjunto blanco">
           <div class="card-body">
             <h5 class="card-title">Marcela Kaury</h5>
             <p class="card-text">
@@ -213,7 +211,7 @@
           </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem" >
+      <div class="card" style="width: 15rem" >
         <img
           src="../image/conjunto-negro-transparente.jpg"
           class="card-img-top"
@@ -285,16 +283,14 @@
           </a>
         </div>
       </section>
-      <div class="floating-button">
-        <a href="https://web.whatsapp.com/" target="_blank">
-          <img
-            class="whatsapp"
-            src="../image/003-whatsapp.png"
-            alt="Whatsapp"
-          />
-        </a>
-        <p>Consultanos al Whatsapp</p>
-      </div>
+       <!-- Enlace de WhatsApp con el ícono -->
+       <a
+       href="https://wa.me/NUMERO_DE_TELEFONO"
+       class="whatsapp-icon"
+       target="_blank"
+     >
+       <i class="fab fa-whatsapp"></i>
+     </a>
       <section class="mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.269342564612!2d-65.20138802573736!3d-26.799551176714736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d796a405b79%3A0xf2588ff7da88532e!2sbarrio%20los%20pinos!5e0!3m2!1ses!2sar!4v1688843629565!5m2!1ses!2sar"
