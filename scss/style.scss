@@ -1,4 +1,4 @@
- @import url(_vars.scss);
+ @import "_vars.scss";
     .comienzo {
       background-color: #eec3c9;
       margin: 0%;
@@ -469,4 +469,28 @@
   }
 
   /*Implementando diseño a la pág Ofertas */
-  
+ .mainOfertas {
+    display: grid;
+    grid-template-areas: "menuOfertas imgOfertas";
+    grid-template-columns: 1fr 4fr;
+
+
+    .menuOfertas {
+        grid-area: menuOfertas;
+    
+     }
+
+
+
+     .imgOfertas {
+        grid-area: imgOfertas;
+        display: flex;
+     }
+
+ }
+
+
+  .checkInput {
+    list-style: none;
+
+  }

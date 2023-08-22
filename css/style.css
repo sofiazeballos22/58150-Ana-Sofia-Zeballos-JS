@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(_vars.scss);
+/*momento hover imagenes ofertas */
 .comienzo {
   background-color: #eec3c9;
   margin: 0%;
@@ -379,3 +379,21 @@ header {
   transform: scale(1.1); }
 
 /*Implementando diseño a la pág Ofertas */
+.mainOfertas {
+  display: grid;
+  grid-template-areas: "menuOfertas imgOfertas";
+  grid-template-columns: 1fr 4fr; }
+  .mainOfertas .menuOfertas {
+    grid-area: menuOfertas; }
+  .mainOfertas .imgOfertas {
+    grid-area: imgOfertas;
+    display: flex; }
+    .mainOfertas .imgOfertas .imgHover:hover {
+      width: 200px;
+      height: 200px;
+      background-image: url("imagen-normal.jpg");
+      background-size: cover;
+      transition: background-image 0.3s; }
+
+.checkInput {
+  list-style: none; }
