@@ -441,13 +441,21 @@ header {
       transition: all 0.3s ease;
       /* Agregamos una transición suave para los cambios */
       display: inline-block;
-      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */ }
-    .main-ubicacion-contacto .links .link-1 a:hover {
-      background-color: #e7a4ac;
-      transform: scale(1.05);
-      /* Agranda ligeramente el contenedor */
-      border-radius: 30%;
-      /* Borde ovalado */ }
+      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */
+      transform: translateY(-100%);
+      animation: slideIn 1s ease forwards; }
+      .main-ubicacion-contacto .links .link-1 a:hover {
+        background-color: #e7a4ac;
+        transform: scale(1.05);
+        /* Agranda ligeramente el contenedor */
+        border-radius: 30%;
+        /* Borde ovalado */ }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
   .main-ubicacion-contacto .links .link-2 {
     grid-area: link-2;
     display: flex;
@@ -461,9 +469,11 @@ header {
       transition: all 0.3s ease;
       /* Agregamos una transición suave para los cambios */
       display: inline-block;
-      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */ }
-    .main-ubicacion-contacto .links .link-2 a:hover {
-      background-color: #e7a4ac;
-      transform: scale(1.05);
-      /* Agranda ligeramente el contenedor */
-      border-radius: 30%; }
+      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */
+      transform: translateY(-100%);
+      animation: slideIn 1s ease forwards; }
+      .main-ubicacion-contacto .links .link-2 a:hover {
+        background-color: #e7a4ac;
+        transform: scale(1.05);
+        /* Agranda ligeramente el contenedor */
+        border-radius: 30%; }

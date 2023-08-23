@@ -558,14 +558,15 @@
             padding-left: 100%;
         }
 
-    .links{
-        display: grid;
-        grid-template-areas: 
-        "link-1 link-2"
-        ;
-        grid-template-columns: 3fr 3fr;
+        .links {
+            display: grid;
+            grid-template-areas: 
+            "link-1 link-2"
+            ;
+            grid-template-columns: 3fr 3fr;
+            
 
-        .link-1 {
+            .link-1 {
             grid-area: link-1;
             display: flex;
             flex-direction: column;
@@ -578,39 +579,47 @@
                 color: hsl(0, 13%, 6%);
                 transition: all 0.3s ease; /* Agregamos una transición suave para los cambios */
                 display: inline-block; /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */
+                transform: translateY(-100%);
+                animation: slideIn 1s ease forwards;
 
-
-
-                
-            }
-
-                a:hover{
+                &:hover{
                     background-color: #e7a4ac;
                     transform: scale(1.05); /* Agranda ligeramente el contenedor */
                     border-radius: 30%; /* Borde ovalado */
                 }
+            }      
         }
-        .link-2 {
-            grid-area: link-2;
-            display: flex;  
-            flex-direction: column; 
-            align-items: center;
-            font-family: $fontsfamily;
-            font-size: 20px;
-
-            a {
-                color: hsl(0, 13%, 6%);
-                text-decoration: none;
-                transition: all 0.3s ease; /* Agregamos una transición suave para los cambios */
-                display: inline-block; /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */
+            @keyframes slideIn {
+             0% {
+                transform: translateY(-100%);
             }
-            
-            a:hover {
-                background-color: #e7a4ac;
-                transform: scale(1.05); /* Agranda ligeramente el contenedor */
-                border-radius: 30%; 
-
+                100% {
+                transform: translateY(0);
             }
-        }
+            }
+            .link-2 {
+                grid-area: link-2;
+                display: flex;  
+                flex-direction: column; 
+                align-items: center;
+                font-family: $fontsfamily;
+                font-size: 20px;
+
+                a {
+                    color: hsl(0, 13%, 6%);
+                    text-decoration: none;
+                    transition: all 0.3s ease; /* Agregamos una transición suave para los cambios */
+                    display: inline-block; /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */
+                    transform: translateY(-100%);
+                    animation: slideIn 1s ease forwards;
+
+                    &:hover {
+                    background-color: #e7a4ac;
+                    transform: scale(1.05); /* Agranda ligeramente el contenedor */
+                    border-radius: 30%; 
+                    }
+                }    
+            }
+       
     }
-    }
+}
