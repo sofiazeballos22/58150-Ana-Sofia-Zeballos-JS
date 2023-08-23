@@ -224,28 +224,6 @@ header {
 .name {
   font-family: 'Courgette', cursive; }
 
-.floating-button {
-  /* Estilos del botón */
-  position: fixed;
-  bottom: 10px;
-  /* Ajusta la distancia desde abajo */
-  right: 20px;
-  /* Ajusta la distancia desde la derecha */
-  width: 90px;
-  /* Ajusta el ancho del botón */
-  height: 90px;
-  /* Ajusta la altura del botón  */
-  border-radius: 100%;
-  /* Da forma de círculo al botón */
-  background-color: rosybrown;
-  z-index: 9999;
-  /* Asegura que el botón esté por encima de otros elementos */
-  /* Estilos adicionales para el botón */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
 .comienzo2 {
   margin: 0%;
   padding: 0%;
@@ -381,23 +359,111 @@ header {
 /*Implementando diseño a la pág Ofertas */
 .mainOfertas {
   display: grid;
-  grid-template-areas: "menuOfertas imgOfertas";
+  grid-template-areas: "botonOrdenar botonOrdenar" "menuOfertas imgOfertas";
   grid-template-columns: 1fr 4fr; }
+  .mainOfertas .mb-4 {
+    width: 20%;
+    margin-left: 70%; }
+  .mainOfertas .botonOrdenar {
+    grid-area: botonOrdenar; }
   .mainOfertas .menuOfertas {
     grid-area: menuOfertas; }
     .mainOfertas .menuOfertas .filtros {
       font-family: 'DM Serif Display', serif;
-      font-size: 20px; }
-    .mainOfertas .menuOfertas .is-divider small {
-      height: 10px;
-      background-color: #25d366;
+      font-size: 20px;
+      text-align: center; }
+    .mainOfertas .menuOfertas .is-divider-small {
+      height: 5px;
+      background-color: #c285a7;
       margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       padding-left: 100%; }
   .mainOfertas .imgOfertas {
     grid-area: imgOfertas;
     display: flex;
     justify-content: space-around; }
 
+.navbar-principal-ofertas {
+  grid-area: navbar-principal;
+  width: 100%;
+  height: 4rem;
+  background-color: #9c7580; }
+
+.navOfertas {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  .navOfertas ul {
+    width: 100%;
+    height: 50%;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .navOfertas ul a {
+      text-decoration: none;
+      color: aliceblue; }
+
 .checkInput {
   list-style: none; }
+
+/* Implementando sass a Nosotros */
+.main-ubicacion-contacto .tituloContacto {
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px; }
+
+.main-ubicacion-contacto .is-divider-smallNosotros {
+  height: 5px;
+  background-color: #c285a7;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 100%; }
+
+.main-ubicacion-contacto .links {
+  display: grid;
+  grid-template-areas: "link-1 link-2";
+  grid-template-columns: 3fr 3fr; }
+  .main-ubicacion-contacto .links .link-1 {
+    grid-area: link-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "DM Serif Display", serif;
+    font-size: 20px; }
+    .main-ubicacion-contacto .links .link-1 a {
+      text-decoration: none;
+      color: #110d0d;
+      transition: all 0.3s ease;
+      /* Agregamos una transición suave para los cambios */
+      display: inline-block;
+      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */ }
+    .main-ubicacion-contacto .links .link-1 a:hover {
+      background-color: #e7a4ac;
+      transform: scale(1.05);
+      /* Agranda ligeramente el contenedor */
+      border-radius: 30%;
+      /* Borde ovalado */ }
+  .main-ubicacion-contacto .links .link-2 {
+    grid-area: link-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "DM Serif Display", serif;
+    font-size: 20px; }
+    .main-ubicacion-contacto .links .link-2 a {
+      color: #110d0d;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      /* Agregamos una transición suave para los cambios */
+      display: inline-block;
+      /* Hacemos que el enlace sea un bloque en línea para poder aplicar propiedades de transformación */ }
+    .main-ubicacion-contacto .links .link-2 a:hover {
+      background-color: #e7a4ac;
+      transform: scale(1.05);
+      /* Agranda ligeramente el contenedor */
+      border-radius: 30%; }
