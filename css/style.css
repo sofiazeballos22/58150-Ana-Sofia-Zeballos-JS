@@ -7,7 +7,7 @@
 
 .marketing {
   grid-area: marketing;
-  background-color: lightpink;
+  background-color: #9c7580;
   order: -1;
   width: auto;
   height: 4rem;
@@ -24,13 +24,14 @@ header {
   display: grid;
   grid-template-columns: 4fr 4fr;
   grid-template-rows: 1.3fr 3fr;
-  grid-template-areas: "marketing marketing" "titulo encabezado1" "navbar-principal navbar-principal"; }
+  grid-template-areas: "marketing marketing" "titulo encabezado1" "navbar-principal navbar-principal";
+  background-color: #b38e98; }
 
 .encabezado1 {
   grid-area: encabezado1;
   display: flex;
   flex-direction: row;
-  background-color: #694a50; }
+  background-color: #b38e98; }
 
 .titulo {
   grid-area: titulo;
@@ -55,7 +56,7 @@ header {
 
 .nav1 .listado1 {
   width: 40%;
-  height: 50%;
+  height: 65%;
   list-style: none;
   display: inline-flex;
   align-items: center;
@@ -153,7 +154,7 @@ header {
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-rows: auto;
   grid-template-areas: "infodueña infodueña infodueña" "redessociales redessociales mapa" "zonadescarga zonadescarga zonadescarga" "metodopago metodopago metodopago";
-  background-color: #ff8198; }
+  background-color: #b38e98; }
 
 .zonadescarga {
   grid-area: zonadescarga;
@@ -477,3 +478,7 @@ header {
         transform: scale(1.05);
         /* Agranda ligeramente el contenedor */
         border-radius: 30%; }
+
+/* Implementando menu hamburguesa para tamaño de celular */
+.navbar navbar-dark bg-dark fixed-top {
+  display: none; }
