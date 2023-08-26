@@ -113,10 +113,28 @@ header {
   justify-content: space-between; }
 
 .bg-dark {
-  display: none; }
+  display: none;
+  top: 0;
+  background-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important; }
 
 .fixed-top {
   position: relative; }
+
+/* Colores del nav para celular */
+.text-bg-dark {
+  color: #fcf5f5 !important;
+  background-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important; }
+
+.dropdown-menu-dark {
+  background-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important; }
+
+.btn-success {
+  background-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important;
+  border-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important; }
+
+/* Modificando los componentes de boostrap en Categorias */
+.offcanvas.show:not(.hiding), .offcanvas.showing {
+  max-width: 250px; }
 
 .portada {
   margin-top: 2rem;
@@ -306,7 +324,12 @@ header {
 
 .card {
   width: calc(33.33% - 20px);
-  /* Ancho de cada tarjeta, con margen entre ellas */ }
+  /* Ancho de cada tarjeta, con margen entre ellas */
+  background-color: #f3d6d3;
+  border-radius: 5%; }
+  .card .card-body {
+    padding: 0;
+    text-align: center; }
 
 .productos {
   display: flex;
@@ -320,19 +343,46 @@ header {
 /* Modificando el main de categorias */
 .accordion-body {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  background-color: #aa8b94; }
 
 .boton-categoria {
   height: 4rem;
   border-style: none; }
 
+.accordion-button {
+  background-color: #9c7580;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(127 55 97 / 40%); }
+  .accordion-button .accordion-button::after {
+    background-color: #694a50; }
+
+.accordion-button:not(.collapsed) {
+  color: #000000;
+  background-color: #9c7580;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #9c7580; }
+
 .boton-categoria:hover {
-  background-color: #eec3c9; }
+  background-color: #bdaaaf; }
 
-.galeria-img {
-  background-color: antiquewhite; }
+@media (max-width: 750px) {
+  .list-group.list-group-flush ul.list-group-flush {
+    margin-bottom: 0;
+    padding-left: 0; } }
 
-/* Estilos para el icono de WhatsApp */
+.talles-mujeres {
+  border-color: #dabec3;
+  padding: 5px 10px;
+  border-radius: 20%; }
+
+/*-----------------------------------------------------------------/*
+  
+  .galeria-img {
+      background-color: antiquewhite;
+  }
+  
+  
+  
+  /* Estilos para el icono de WhatsApp */
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
