@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: 2px solid black;
+    outline: none;
     text-decoration: none;
 }
     .comienzo {
@@ -156,7 +157,7 @@
     .bg-dark {
      display: none;
      top: 0;
-     background-color: rgba(179, 142, 152, var(--bs-bg-opacity)) !important; 
+     background-color: rgba(#9c7580, var(--bs-bg-opacity)) !important; 
  }
 
     .fixed-top {
@@ -377,12 +378,6 @@
       align-items: center;
   }
   
-  .encabezado {
-      display: flex;
-      flex-direction: row;
-      background-color: #694a50;
-  }
-  
 
   
   .redessociales p {
@@ -430,7 +425,7 @@
   .card {
       width: calc(33.33% - 20px);
       /* Ancho de cada tarjeta, con margen entre ellas */
-      background-color: #f3d6d3;
+      background-color: #b38e98;
       border-radius: 5%;
 
       .card-body {
@@ -591,6 +586,20 @@
         display: flex;
         justify-content: space-around;
 
+
+        @media (max-width:750px) {
+
+            .card {
+                max-width: 200px;
+               
+
+                img {
+                    max-height: 200px;
+                }
+            }
+            
+        }
+
         }
 
      }
@@ -634,7 +643,7 @@
 
 
 
-/* Implementando sass a Nosotros */
+/* Implementando sass a Ubicación y contacto */
 
     .main-ubicacion-contacto {
 
@@ -658,12 +667,19 @@
         }
 
         .links {
+
+            @media (max-width:750px) {  
+                display: flex;  
+                flex-direction: column;
+                
+            }
+
             display: grid;
             grid-template-areas: 
             "link-1 link-2"
             ;
             grid-template-columns: 3fr 3fr;
-            
+
 
             .link-1 {
             grid-area: link-1;
@@ -672,6 +688,10 @@
             align-items: center;
             font-family: $fontsfamily;
             font-size: 20px;
+
+            p {
+                margin-top: 1rem;
+            }
             
             a {
                 text-decoration: none;
@@ -704,6 +724,10 @@
                 font-family: $fontsfamily;
                 font-size: 20px;
 
+                p {
+                    margin-top: 1rem;
+                }
+
                 a {
                     color: hsl(0, 13%, 6%);
                     text-decoration: none;
@@ -722,6 +746,201 @@
         }
     }
 
-    
+    /* Implementando Sass y @medias a Nosotros */
 
+
+    .nosotros-nuestro-equipo {
+        margin-top: 3rem;
+        background-image: url(../image/nuestro-equipo.png); 
+         
+        h1 {
+            text-align: center;
+            font-family: $fontsfamily;
+            font-size: 65px;
+            font-weight: bold;
+
+        }
+
+        p {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+
+        .historia-kyros {
+            display: flex;
+            flex-direction: row;
+
+
+
+
+            p {
+                display: flex;
+                align-items: center;
+                font-family: 'Merriweather', serif;
+                font-size: 20px;
+                font-weight: bold;
+            }                
+
+            img {
+                max-width: 500px;
+                border-radius: 20%;
+                transform: translateX(-100%); /* Posición inicial fuera de la pantalla */
+                animation: slideIn 2s ease-in-out forwards; /* Animación con duración de 1 segundo */
+            }
+
+
+            @keyframes slideIn {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(0); /* Posición final, centrada en la pantalla */
+                }
+            }
+
+            @media (max-width:750px) {
+
+                flex-direction: column-reverse;
+
+                p {
+                    font-size: 16px;
+                    font-weight: none;
+                    width: 250px;
+                    text-align: center;
+                    align-self: center;
+                }
+
+                img {
+                    display: inline;
+                    max-width: 300px;
+                    align-self: center;
+                    height: 250px;
+                }
+             
+            }
+
+        }
+
+        .historia-kyros-2 {
+            display: flex;
+            flex-direction: row-reverse;
+
+
+            p {
+                display: flex;
+                align-items: center;
+                font-family: 'Merriweather', serif;
+                font-size: 20px;
+                font-weight: bold;
+            }                
+
+            img {
+                max-width: 500px;
+                border-radius: 20%;
+                transform: translateX(-100%); /* Posición inicial fuera de la pantalla */
+                animation: slide2 2s ease-in-out forwards; /* Animación con duración de 1 segundo */
+                height: 285px;
+            }
+
+
+            @keyframes slide2 {
+                0% {
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(0); /* Posición final, centrada en la pantalla */
+                }
+            }
+
+            @media (max-width:750px) {
+
+                p {
+                    font-size: 16px;
+                    font-weight: none;
+                    display: none;
+                }
+             
+            }
+        }
+
+        .historia-kyros-3 {
+            display: flex;
+            flex-direction: row;
+
+
+            p {
+                display: flex;
+                align-items: center;
+                font-family: 'Merriweather', serif;
+                font-size: 20px;
+                font-weight: bold;
+            }                
+
+            img {
+                max-width: 500px;
+                border-radius: 20%;
+                transform: translateX(-100%); /* Posición inicial fuera de la pantalla */
+                animation: slide3 2s ease-in-out forwards; /* Animación con duración de 1 segundo */
+                height: 285px;
+            }
+
+
+            @keyframes slide3 {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(0); /* Posición final, centrada en la pantalla */
+                }
+            }
+            
+            @media (max-width:750px) {
+
+                flex-direction: column-reverse;
+
+                p {
+                    font-size: 16px;
+                    font-weight: none;
+                    width: 250px;
+                    text-align: center;
+                    align-self: center;
+                }
+             
+                img {
+                    display: inline;
+                    max-width: 300px;
+                    align-self: center;
+                }
+            }
+        }
+
+
+        @media (max-width:750px) {
+
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 45px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: none;
+                width: 250px;
+                text-align: center;
+                align-self: center;
+            }
+
+            img {
+                display: none;
+            }
+            
+        }
+    }
    
