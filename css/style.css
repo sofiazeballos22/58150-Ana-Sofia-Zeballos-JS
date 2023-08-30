@@ -158,11 +158,13 @@ header {
 
 .imagen1_portada {
   border-style: double;
-  border-color: #865656; }
+  border-color: #865656;
+  object-fit: cover; }
 
 .imagen2_portada {
   border-style: double;
-  border-color: #865656; }
+  border-color: #865656;
+  object-fit: cover; }
 
 .carrusel {
   grid-area: carrusel;
@@ -360,6 +362,10 @@ header {
   .card .card-body {
     padding: 0;
     text-align: center; }
+  .card .list-group-item {
+    text-align: center; }
+  .card .list-group-items {
+    list-style: none; }
 
 .productos {
   display: flex;
@@ -394,15 +400,16 @@ header {
 .boton-categoria:hover {
   background-color: #bdaaaf; }
 
-@media (max-width: 750px) {
-  .list-group.list-group-flush ul.list-group-flush {
-    margin-bottom: 0;
-    padding-left: 0; } }
+/* Modificaciones de card de sección Ofertas */
+.botones-talles-mujeres {
+  text-align: center; }
+  .botones-talles-mujeres .talles-mujeres {
+    border-color: #dabec3;
+    padding: 5px 10px;
+    border-radius: 20%; }
 
-.talles-mujeres {
-  border-color: #dabec3;
-  padding: 5px 10px;
-  border-radius: 20%; }
+.boton-list-colors {
+  display: none; }
 
 /*-----------------------------------------------------------------/*
   
@@ -437,11 +444,17 @@ header {
   display: grid;
   grid-template-areas: "botonOrdenar botonOrdenar" "menuOfertas imgOfertas";
   grid-template-columns: 1fr 4fr; }
-  .mainOfertas .mb-4 {
-    width: 20%;
-    margin-left: 70%; }
   .mainOfertas .botonOrdenar {
-    grid-area: botonOrdenar; }
+    grid-area: botonOrdenar;
+    margin-top: 10%; }
+    .mainOfertas .botonOrdenar .mb-4 {
+      width: 20%;
+      margin-left: 70%; }
+    @media (max-width: 600px) {
+      .mainOfertas .botonOrdenar .mb-4 {
+        width: 115px;
+        margin-left: 63%;
+        font-size: 16px; } }
   .mainOfertas .menuOfertas {
     grid-area: menuOfertas; }
     .mainOfertas .menuOfertas .filtros {
@@ -454,15 +467,73 @@ header {
       margin-top: 10px;
       margin-bottom: 15px;
       padding-left: 100%; }
+    @media (max-width: 750px) {
+      .mainOfertas .menuOfertas .filtros {
+        font-size: 16px; }
+      .mainOfertas .menuOfertas .is-divider-small {
+        height: 3px;
+        background-color: #c285a7;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 100%; }
+      .mainOfertas .menuOfertas .form-select {
+        height: 40px;
+        font-size: 16px; }
+      .mainOfertas .menuOfertas .checkInput {
+        padding-left: 10px; } }
   .mainOfertas .imgOfertas {
     grid-area: imgOfertas;
     display: flex;
-    justify-content: space-around; }
-    @media (max-width: 750px) {
+    justify-content: center; }
+    @media (max-width: 600px) {
       .mainOfertas .imgOfertas .card {
-        max-width: 200px; }
+        max-width: 115px;
+        margin-right: 5px;
+        max-height: 90%; }
+        .mainOfertas .imgOfertas .card .card-title {
+          margin-bottom: 0; }
         .mainOfertas .imgOfertas .card img {
-          max-height: 200px; } }
+          max-height: 115px;
+          object-fit: cover; }
+        .mainOfertas .imgOfertas .card .card-body {
+          flex: none; }
+          .mainOfertas .imgOfertas .card .card-body .card-text {
+            display: none; }
+        .mainOfertas .imgOfertas .card .list-group-items {
+          display: none;
+          list-style: none; }
+        .mainOfertas .imgOfertas .card .boton-list-colors {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          align-self: center; }
+          .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors {
+            flex-direction: row;
+            display: contents; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button {
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              color: white;
+              text-align: center;
+              line-height: 50px;
+              border: none; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(1) {
+              background-color: blue; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(2) {
+              background-color: red; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(3) {
+              background-color: green; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(4) {
+              background-color: orange; }
+            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(5) {
+              background-color: purple; }
+        .mainOfertas .imgOfertas .card .talles-mujeres {
+          border-color: #dabec3;
+          padding: 5px 10px;
+          border-radius: 20%; }
+        .mainOfertas .imgOfertas .card .talles-mujeres {
+          padding: 5px 8px; } }
 
 .navbar-principal-ofertas {
   grid-area: navbar-principal;

@@ -211,11 +211,13 @@
   .imagen1_portada {
       border-style: double;
       border-color: rgb(134, 86, 86);
+      object-fit: cover;
   }
   
   .imagen2_portada {
       border-style: double;
       border-color: rgb(134, 86, 86);
+      object-fit: cover;
   }
   
   .carrusel {
@@ -410,9 +412,7 @@
   
   
   
-  
-  
-  
+
   
   
   .namepag {
@@ -483,7 +483,7 @@
       /* Cambio a nowrap para evitar envoltura */
   }
   
-  .card {
+    .card {
       width: calc(33.33% - 20px);
       /* Ancho de cada tarjeta, con margen entre ellas */
       background-color: #b38e98;
@@ -492,9 +492,20 @@
       .card-body {
         padding: 0;
         text-align: center;
+        
+
       }
 
-  }
+        .list-group-item {
+            text-align: center;
+        }
+
+        .list-group-items {
+            list-style: none;
+
+        }
+
+    }
 
   
   
@@ -544,30 +555,23 @@
       background-color: #bdaaaf;
   }
 
+   /* Modificaciones de card de sección Ofertas */
  
-  .list-group.list-group-flush { 
-     @media (max-width: 750px) {
+    .botones-talles-mujeres {
+        text-align: center;
 
-        ul.list-group-flush {
-            margin-bottom: 0;
-            padding-left: 0;
-          
-     }
-   
+        .talles-mujeres {
+            border-color: #dabec3;
+            padding: 5px 10px;
+            border-radius: 20%;
+           }
+
     }
- }
- 
-        
-    
 
-
-
-
-   .talles-mujeres {
-    border-color: #dabec3;
-    padding: 5px 10px;
-    border-radius: 20%;
-   }
+    .boton-list-colors {
+        display: none;
+    }
+  
   
 
   /*-----------------------------------------------------------------/*
@@ -609,15 +613,26 @@
     "menuOfertas imgOfertas";
     grid-template-columns: 1fr 4fr;
     
-        .mb-4 {
-            width: 20%;
-            margin-left: 70%;
-            
-
-        }
     
     .botonOrdenar{
         grid-area: botonOrdenar;
+        margin-top: 10%;
+
+        .mb-4 {
+            width: 20%;
+            margin-left: 70%;
+
+        }
+        
+        @media (max-width:600px) {
+            .mb-4 {
+                width: 115px;
+                margin-left: 63%;
+                font-size: 16px;
+            }
+
+
+        }
     }
 
     .menuOfertas {
@@ -638,26 +653,131 @@
             margin-bottom: 15px;
             padding-left: 100%;
         }
-      
+
+        @media (max-width:750px) {
+            .filtros {
+                font-size: 16px;
+            }
+
+            .is-divider-small {
+                height: 3px;
+                background-color: $separador;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding-left: 100%;
+            }
+            
+            .form-select {
+                height: 40px;
+                font-size: 16px;
+
+            }
+
+            .checkInput {
+                padding-left: 10px;
+            }
+        }
+
      }
 
 
      .imgOfertas {
         grid-area: imgOfertas;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        
 
 
-        @media (max-width:750px) {
+        @media (max-width:600px) {
 
             .card {
-                max-width: 200px;
+                max-width: 115px;
+                margin-right: 5px;
+                max-height: 90%;
+
+
+                .card-title {
+                    margin-bottom: 0;
+                }
                
 
                 img {
-                    max-height: 200px;
+                    max-height: 115px;
+                    object-fit: cover;
                 }
-            }
+
+                .card-body {
+                    flex: none;
+                    
+                    .card-text {
+                        display: none;
+
+                    }
+                }
+
+                .list-group-items {
+                    display: none;
+                    list-style: none;
+
+                }
+
+        
+                .boton-list-colors {
+
+                    display: flex;
+                    list-style: none;
+                    padding: 0;
+                    align-self: center;
+
+                    .list-group-colors {
+
+                        flex-direction: row;
+                        display: contents;
+
+                        .round-button {
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            color: white;
+                            text-align: center;
+                            line-height: 50px;
+                            border: none;
+
+                        }
+
+                        .round-button:nth-child(1) {
+                            background-color: blue;
+                          }
+                          
+                          .round-button:nth-child(2) {
+                            background-color: red;
+                          }
+                          
+                          .round-button:nth-child(3) {
+                            background-color: green;
+                          }
+                          
+                          .round-button:nth-child(4) {
+                            background-color: orange;
+                          }
+                          
+                          .round-button:nth-child(5) {
+                            background-color: purple;
+                        }
+                    }
+                }
+                
+                .talles-mujeres {
+                    border-color: #dabec3;
+                    padding: 5px 10px;
+                    border-radius: 20%;
+                   }
+
+               .talles-mujeres {
+                padding: 5px 8px;
+                
+               }
+            } 
             
         }
 
