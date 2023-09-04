@@ -29,6 +29,7 @@
       font-size: 18px;
       position: sticky;
       font-family: 'DM Serif Display', serif;
+      text-align: center;
   }
   
   header {
@@ -47,7 +48,37 @@
       display: flex;
       flex-direction: row;
       background-color:#b38e98;
-  }
+
+
+      .nav1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .listado1 {
+        width: 40%;
+        height: 65%;
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 2.1rem;
+        margin-bottom: 0;
+        padding: 0;
+        }
+     
+        @media (max-width:750px) {
+
+        .listado1 {
+            width: 60%;
+            margin-right: 1rem;
+        }
+            
+        }
+    }
   
   .titulo {
       grid-area: titulo;
@@ -55,48 +86,34 @@
       height: 100%;
       justify-items: center;
       display: contents;
-  }
-  
-  .principal {
-      height: auto;
-      font-family: 'DM Serif Display', serif;
-      font-size: 50px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 0;
-  }
-  
-  .nav1 {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-  }
-  
-  .nav1 .listado1 {
-      width: 40%;
-      height: 65%;
-      list-style: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-right: 2.1rem;
-      margin-bottom: 0;
-      padding: 0;
 
-  }
-
-  .boton{
-        
-
-        a {
-            display: flex;
-            height: auto;
-            width: auto;
+      .principal {
+        height: auto;
+        font-family: $fontfamily;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
         }
 
-  }
+        @media (max-width:750px) {
+            .principal {
+                font-size: 40px;
+            }
+            
+        }
+     }
+  
+  
+  
+ 
+  .boton{  
+        a {
+        display: flex;
+        height: auto;
+        width: auto;
+        }
+    }
   
   .navbar-principal {
       grid-area: navbar-principal;
@@ -151,6 +168,12 @@
   .container-fluid-hamburguesa {
     display: flex;
     justify-content: space-between;
+
+    img {
+        width: 200px;
+        height: 100px;
+        object-fit: cover;
+    }
    
   }
 
@@ -338,7 +361,16 @@
   
   .zonadescarga {
       grid-area: zonadescarga;
-      margin: 10px;
+      display: flex;
+
+      a {
+        margin-left: 10px;
+        font-family: $fontfamily
+      }
+       
+      p {
+        font-family: $fontfamily;
+      }
   }
   
   .infodueña {
@@ -348,13 +380,25 @@
       /* Agregar posición relativa */
       text-align: center;
       /* Centrar el texto horizontalmente */
+
+      .namepag {
+        font-family: $fontsfamily;
+        font-size: 30px;
+    }
+    
+    .name {
+        font-family: $fontfamily;
+        margin: 0;
+    }
+    
+
   }
   
   
   
   .redessociales {
       grid-area: redessociales;
-      height: auto;
+      height: 200px;
       width: auto;
       flex-direction: column;
       justify-content: center;
@@ -375,29 +419,42 @@
       text-align: center;
       /* background: blanchedalmond;*/
       /* Ajusta los márgenes y relleno según sea necesario */
+
+      p {
+        font-size: 20px;
+        text-align: center;
+        font-family: $fontsfamily;
+        padding: 10px;
+        margin-top: -5px;
+        margin-bottom: -5px;
+    }
+
+    iframe {
+        max-width: 100%;
+        /* Asegura que el mapa se ajuste al ancho del contenedor */
+        height: auto;
+        /* Permite que el alto se ajuste automáticamente */
+        border: 0;
+    }
+
+
+      @media (max-width:750px) {
+
+
+        p {
+            font-size: 16px;
+        }
+        
+      }
+    
   }
   
-  .mapa iframe {
-      max-width: 100%;
-      /* Asegura que el mapa se ajuste al ancho del contenedor */
-      height: auto;
-      /* Permite que el alto se ajuste automáticamente */
-      border: 0;
-  }
+
   
-  
-  .mapa p {
-      font-size: 20px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      padding: 10px;
-      margin-top: -5px;
-      margin-bottom: -5px;
-  }
-  
+
   .metodopago {
       grid-area: metodopago;
-      height: 100px;
+      height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -411,19 +468,7 @@
   }
   
   
-  
 
-  
-  
-  .namepag {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 30px;
-  }
-  
-  .name {
-      font-family: 'Courgette', cursive;
-  }
-  
   
   .comienzo2 {
       margin: 0%;
@@ -440,22 +485,48 @@
   }
   
 
-  
-  .redessociales p {
-      align-items: center;
+  .redessociales  {
+        display: flex;
       text-align: center;
       margin-top: -2px;
+      width: 50%;
+      grid-area: redessociales;
+      height: 200px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-style: none;
+      background: linear-gradient(45deg, #eec3c9, #9c7580, #694a50);
+      background-size: 100%;
+      border-radius: 15px;
+
+      .parrafoenlace {
+        font-size: 20px;
+        font-family: $fontsfamily;
+    }
+    
+    .enlaces {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @media (max-width:750px) {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+
+
+        .parrafoenlace {
+            font-size: 16px;
+
+        }
+        
+    }
   }
   
-  .parrafoenlace {
-      font-size: 20px;
-      font-family: 'Montserrat', sans-serif;
-  }
-  
-  .enlaces {
-      display: flex;
-      justify-content: space-evenly;
-  }
+
   
   
   .grid-categorias {
@@ -466,7 +537,11 @@
           "accordion productos-card";
       grid-template-columns: 1fr 4fr;
       gap: 20px;
-  
+    
+      @media (max-width:520px) {
+        gap: 5px;
+        
+      }
   }
   
   .accordion {
@@ -476,23 +551,46 @@
   .productos-card {
       grid-area: productos-card;
       display: flex;
-      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: space-between;
-      flex-wrap: nowrap;
-      /* Cambio a nowrap para evitar envoltura */
+     
   }
   
     .card {
-      width: calc(33.33% - 20px);
-      /* Ancho de cada tarjeta, con margen entre ellas */
       background-color: #b38e98;
       border-radius: 5%;
+      
+        img {
+            object-fit: cover;
+        }
+
+      div {
+        text-align: center;
+        
+      }
+
+     
 
       .card-body {
         padding: 0;
         text-align: center;
+
+        .card-text-2 {
+            display: none;
+        }
+
         
+        
+        @media (max-width:520px) {
+            .card-text-2 {
+                display: block;
+                font-size: 14px;
+                margin-bottom: 3px;
+            }
+
+            
+        }
 
       }
 
@@ -505,6 +603,73 @@
 
         }
 
+        
+        .boton-list-colors {
+            display: none;
+        }
+
+        @media (max-width:504px) {
+            max-width: 100px;
+                max-height: 100%;
+                gap: 1px;
+            
+            img {
+                height: 100px;
+            }
+
+            .card-title {
+                margin-bottom: 0;
+                font-size: 16px;
+            }
+
+            .card-text {
+                display: none;
+            }
+
+            .list-group-item {
+                display: none;
+            }
+
+            
+            .boton-list-colors {
+                display: block;
+                list-style: none;
+                padding: 1px;
+                text-align: center;
+
+                .round-button {
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    color: white;
+                    text-align: center;
+                    line-height: 50px;
+                    border: none;
+
+                }
+
+                .round-button:nth-child(1) {
+                    background-color: blue;
+                  }
+                  
+                  .round-button:nth-child(2) {
+                    background-color: red;
+                  }
+                  
+                  .round-button:nth-child(3) {
+                    background-color: green;
+                  }
+                  
+                  .round-button:nth-child(4) {
+                    background-color: orange;
+                  }
+                  
+                  .round-button:nth-child(5) {
+                    background-color: purple;
+                }
+            }
+        }
+        
     }
 
   
@@ -514,12 +679,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: center;
+      
     
 
       @media (max-width: 750px) {
-        max-width: 203px;
- 
+        gap: 5px;
     }
 }
   
@@ -626,7 +790,7 @@
     
     .botonOrdenar{
         grid-area: botonOrdenar;
-        margin-top: 10%;
+        margin-top: 30px;
 
         .mb-4 {
             width: 20%;
@@ -694,16 +858,16 @@
      .imgOfertas {
         grid-area: imgOfertas;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         
 
 
-        @media (max-width:600px) {
+        @media (max-width:500px) {
 
             .card {
                 max-width: 115px;
                 margin-right: 5px;
-                max-height: 90%;
+                max-height: 77%;
 
 
                 .card-title {
@@ -723,6 +887,10 @@
                         display: none;
 
                     }
+                }
+
+                .card-text-2 {
+                    display: block;
                 }
 
                 .list-group-items {
@@ -1131,6 +1299,15 @@
             img {
                 display: none;
             }
+            
+        }
+    }
+
+    .registro-usuario {
+        display: flex;
+        flex-direction: column;
+        
+        div {
             
         }
     }
