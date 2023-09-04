@@ -323,6 +323,9 @@ header {
   height: 40px;
   margin: 0 30px;
   /* Ajusta el margen horizontal según tus preferencias */ }
+  @media (max-width: 520px) {
+    .metodopago img {
+      margin: 0 15px; } }
 
 .comienzo2 {
   margin: 0%;
