@@ -391,9 +391,27 @@ header {
 
 .card {
   background-color: #b38e98;
-  border-radius: 5%; }
-  .card img {
-    object-fit: cover; }
+  border-radius: 5%;
+  overflow: hidden; }
+  .card .botones-talles-mujeres-2 {
+    text-align: center; }
+    .card .botones-talles-mujeres-2 .talles-mujeres-2 {
+      border-color: #dabec3;
+      padding: 5px 5px;
+      border-radius: 20%;
+      font-size: 14px; }
+  .card .card-img-top-cat {
+    object-fit: cover;
+    height: 160px; }
+  .card .card-img-top-cat2 {
+    object-fit: cover;
+    height: 160px;
+    position: absolute;
+    width: 100%;
+    opacity: 0; }
+  .card .card-img-top-cat2:hover {
+    opacity: 1;
+    transition: 0.5s ease; }
   .card div {
     text-align: center; }
   .card .card-body {
@@ -401,7 +419,7 @@ header {
     text-align: center; }
     .card .card-body .card-text-2 {
       display: none; }
-    @media (max-width: 520px) {
+    @media (max-width: 750px) {
       .card .card-body .card-text-2 {
         display: block;
         font-size: 14px;
@@ -412,12 +430,12 @@ header {
     list-style: none; }
   .card .boton-list-colors {
     display: none; }
-  @media (max-width: 504px) {
+  @media (max-width: 750px) {
     .card {
       max-width: 100px;
       max-height: 100%;
       gap: 1px; }
-      .card img {
+      .card .card-img-top-cat2 {
         height: 100px; }
       .card .card-title {
         margin-bottom: 0;
@@ -482,17 +500,6 @@ header {
 .boton-categoria:hover {
   background-color: #bdaaaf; }
 
-/* Modificaciones de card de sección Ofertas */
-.botones-talles-mujeres {
-  text-align: center; }
-  .botones-talles-mujeres .talles-mujeres {
-    border-color: #dabec3;
-    padding: 5px 10px;
-    border-radius: 20%; }
-
-.boton-list-colors {
-  display: none; }
-
 /*-----------------------------------------------------------------/*
   
   .galeria-img {
@@ -533,7 +540,12 @@ header {
 .mainOfertas {
   display: grid;
   grid-template-areas: "botonOrdenar botonOrdenar" "menuOfertas imgOfertas";
-  grid-template-columns: 1fr 4fr; }
+  grid-template-columns: 1fr 4fr;
+  gap: 15px;
+  /* Estilos de imgOfertas */ }
+  @media (max-width: 375px) {
+    .mainOfertas {
+      gap: 5px; } }
   .mainOfertas .botonOrdenar {
     grid-area: botonOrdenar;
     margin-top: 30px; }
@@ -574,58 +586,87 @@ header {
   .mainOfertas .imgOfertas {
     grid-area: imgOfertas;
     display: flex;
+    gap: 10px;
     justify-content: space-evenly; }
-    @media (max-width: 500px) {
-      .mainOfertas .imgOfertas .card {
-        max-width: 115px;
-        margin-right: 5px;
-        max-height: 77%; }
-        .mainOfertas .imgOfertas .card .card-title {
-          margin-bottom: 0; }
-        .mainOfertas .imgOfertas .card img {
-          max-height: 115px;
-          object-fit: cover; }
-        .mainOfertas .imgOfertas .card .card-body {
-          flex: none; }
-          .mainOfertas .imgOfertas .card .card-body .card-text {
-            display: none; }
-        .mainOfertas .imgOfertas .card .card-text-2 {
-          display: block; }
-        .mainOfertas .imgOfertas .card .list-group-items {
-          display: none;
-          list-style: none; }
-        .mainOfertas .imgOfertas .card .boton-list-colors {
+    .mainOfertas .imgOfertas .card-ofertas {
+      background-color: #b38e98;
+      border-radius: 5%;
+      overflow: hidden; }
+      .mainOfertas .imgOfertas .card-ofertas .card-title {
+        text-align: center; }
+      .mainOfertas .imgOfertas .card-ofertas .card-text-2 {
+        display: none;
+        text-align: center; }
+      .mainOfertas .imgOfertas .card-ofertas .card-text {
+        text-align: center; }
+      .mainOfertas .imgOfertas .card-ofertas .card-body {
+        text-align: center; }
+      .mainOfertas .imgOfertas .card-ofertas .list-group-items-ofertas {
+        text-align: center; }
+        .mainOfertas .imgOfertas .card-ofertas .list-group-items-ofertas div {
           display: flex;
-          list-style: none;
-          padding: 0;
-          align-self: center; }
-          .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors {
-            flex-direction: row;
-            display: contents; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button {
-              width: 18px;
-              height: 18px;
-              border-radius: 50%;
-              color: white;
-              text-align: center;
-              line-height: 50px;
-              border: none; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(1) {
-              background-color: blue; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(2) {
-              background-color: red; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(3) {
-              background-color: green; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(4) {
-              background-color: orange; }
-            .mainOfertas .imgOfertas .card .boton-list-colors .list-group-colors .round-button:nth-child(5) {
-              background-color: purple; }
-        .mainOfertas .imgOfertas .card .talles-mujeres {
+          justify-content: space-evenly; }
+      .mainOfertas .imgOfertas .card-ofertas .list-group-item-ofertas {
+        text-align: center; }
+      @media (max-width: 490px) {
+        .mainOfertas .imgOfertas .card-ofertas {
+          max-width: 145px;
+          justify-content: space-evenly; } }
+      .mainOfertas .imgOfertas .card-ofertas .botones-talles-mujeres {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly; }
+        .mainOfertas .imgOfertas .card-ofertas .botones-talles-mujeres .talles-mujeres {
           border-color: #dabec3;
-          padding: 5px 10px;
+          padding: 5px 5px;
           border-radius: 20%; }
-        .mainOfertas .imgOfertas .card .talles-mujeres {
-          padding: 5px 8px; } }
+      .mainOfertas .imgOfertas .card-ofertas .boton-list-colors {
+        display: none; }
+    @media (max-width: 376px) {
+      .mainOfertas .imgOfertas {
+        gap: 3px;
+        justify-content: space-evenly; }
+        .mainOfertas .imgOfertas .card-ofertas {
+          max-width: 120px;
+          margin-right: 5px;
+          height: 90%; }
+          .mainOfertas .imgOfertas .card-ofertas img {
+            max-height: 115px;
+            object-fit: cover; }
+          .mainOfertas .imgOfertas .card-ofertas .card-body {
+            flex: none; }
+            .mainOfertas .imgOfertas .card-ofertas .card-body .card-text {
+              display: none; }
+          .mainOfertas .imgOfertas .card-ofertas .card-text-2 {
+            display: block; }
+          .mainOfertas .imgOfertas .card-ofertas .list-group-items-ofertas {
+            display: none;
+            list-style: none; }
+          .mainOfertas .imgOfertas .card-ofertas .boton-list-colors {
+            display: inline-block;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly; }
+            .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors {
+              flex-direction: row;
+              display: contents; }
+              .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                border: none; }
+              .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(1) {
+                background-color: blue; }
+              .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(2) {
+                background-color: red; }
+              .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(3) {
+                background-color: green; }
+              .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(4) {
+                background-color: purple; } }
 
 .navbar-principal-ofertas {
   grid-area: navbar-principal;

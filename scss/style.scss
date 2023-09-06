@@ -565,17 +565,48 @@
     .card {
       background-color: #b38e98;
       border-radius: 5%;
+      overflow: hidden;
       
-        img {
-            object-fit: cover;
+
+
+      .botones-talles-mujeres-2 {
+        text-align: center;
+       
+
+        .talles-mujeres-2 {
+        border-color: #dabec3;
+        padding: 5px 5px;
+        border-radius: 20%;
+        font-size: 14px;
+        
         }
+    }
+      
+        .card-img-top-cat {
+            object-fit: cover;
+            height: 160px;
+
+        }
+        
+        .card-img-top-cat2 {
+            object-fit: cover;
+            height: 160px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+        }
+
+        .card-img-top-cat2:hover {
+            opacity: 1;
+            transition:  0.5s ease;
+        }
+
 
       div {
         text-align: center;
         
       }
 
-     
 
       .card-body {
         padding: 0;
@@ -586,8 +617,7 @@
         }
 
         
-        
-        @media (max-width:520px) {
+        @media (max-width:750px) {
             .card-text-2 {
                 display: block;
                 font-size: 14px;
@@ -601,6 +631,7 @@
 
         .list-group-item {
             text-align: center;
+            
         }
 
         .list-group-items {
@@ -613,15 +644,14 @@
             display: none;
         }
 
-        @media (max-width:504px) {
+        @media (max-width:750px) {
             max-width: 100px;
                 max-height: 100%;
                 gap: 1px;
             
-            img {
+            .card-img-top-cat2 {
                 height: 100px;
             }
-
             .card-title {
                 margin-bottom: 0;
                 font-size: 16px;
@@ -630,6 +660,7 @@
             .card-text {
                 display: none;
             }
+
 
             .list-group-item {
                 display: none;
@@ -724,23 +755,6 @@
       background-color: #bdaaaf;
   }
 
-   /* Modificaciones de card de sección Ofertas */
- 
-    .botones-talles-mujeres {
-        text-align: center;
-
-        .talles-mujeres {
-            border-color: #dabec3;
-            padding: 5px 10px;
-            border-radius: 20%;
-           }
-
-    }
-
-    .boton-list-colors {
-        display: none;
-    }
-  
   
 
   /*-----------------------------------------------------------------/*
@@ -785,12 +799,18 @@
 
 
   /*Implementando diseño a la pág Ofertas */
- .mainOfertas {
+    .mainOfertas {
     display: grid;
     grid-template-areas: 
     "botonOrdenar botonOrdenar"
     "menuOfertas imgOfertas";
     grid-template-columns: 1fr 4fr;
+    gap: 15px;
+
+    @media (max-width:375px) {
+        gap: 5px;
+        
+    }
     
     
     .botonOrdenar{
@@ -809,7 +829,6 @@
                 margin-left: 63%;
                 font-size: 16px;
             }
-
 
         }
     }
@@ -859,26 +878,87 @@
 
      }
 
+     /* Estilos de imgOfertas */
 
      .imgOfertas {
         grid-area: imgOfertas;
         display: flex;
+        gap: 10px;
         justify-content: space-evenly;
+
+
+        .card-ofertas {
+           
+            background-color: #b38e98;
+            border-radius: 5%;
+            overflow: hidden;
+
+
+            .card-title {
+                text-align: center;
+            }
+
+            .card-text-2 {
+                display: none;
+                text-align: center;
+            }
+
+            .card-text {
+                text-align: center;
+            }
+
+            .card-body {
+                text-align: center;
+            }
+
+            .list-group-items-ofertas {
+                text-align: center;
+
+                div {
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+
+            .list-group-item-ofertas {
+                text-align: center;
+            }
+            
+
+            @media (max-width:490px) {
+                max-width: 145px;
+                justify-content: space-evenly;
+            } 
+
+            .botones-talles-mujeres {
+                text-align: center;
+                display: flex;
+                justify-content: space-evenly;
+        
+                .talles-mujeres {
+                    border-color: #dabec3;
+                    padding: 5px 5px;
+                    border-radius: 20%;
+                   }
+        
+            }
+        
+            .boton-list-colors {
+                display: none;
+            }
+        }
         
 
 
-        @media (max-width:500px) {
+        @media (max-width:376px) { 
+            gap: 3px;
+            justify-content: space-evenly;
 
-            .card {
-                max-width: 115px;
+            .card-ofertas {
+                max-width: 120px;
                 margin-right: 5px;
-                max-height: 77%;
+                height: 90%;
 
-
-                .card-title {
-                    margin-bottom: 0;
-                }
-               
 
                 img {
                     max-height: 115px;
@@ -898,7 +978,7 @@
                     display: block;
                 }
 
-                .list-group-items {
+                .list-group-items-ofertas {
                     display: none;
                     list-style: none;
 
@@ -907,10 +987,11 @@
         
                 .boton-list-colors {
 
-                    display: flex;
+                    display: inline-block;
                     list-style: none;
                     padding: 0;
-                    align-self: center;
+                    display: flex;
+                    justify-content: space-evenly;
 
                     .list-group-colors {
 
@@ -940,31 +1021,15 @@
                             background-color: green;
                           }
                           
-                          .round-button:nth-child(4) {
-                            background-color: orange;
-                          }
                           
-                          .round-button:nth-child(5) {
+                          .round-button:nth-child(4) {
                             background-color: purple;
                         }
                     }
                 }
-                
-                .talles-mujeres {
-                    border-color: #dabec3;
-                    padding: 5px 10px;
-                    border-radius: 20%;
-                   }
-
-               .talles-mujeres {
-                padding: 5px 8px;
-                
-               }
-            } 
-            
+            }    
         }
-
-        }
+    }
 
      }
 
