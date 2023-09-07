@@ -591,7 +591,8 @@ header {
     .mainOfertas .imgOfertas .card-ofertas {
       background-color: #b38e98;
       border-radius: 5%;
-      overflow: hidden; }
+      overflow: hidden;
+      max-height: 490px; }
       .mainOfertas .imgOfertas .card-ofertas .card-title {
         text-align: center; }
       .mainOfertas .imgOfertas .card-ofertas .card-text-2 {
@@ -610,7 +611,7 @@ header {
         text-align: center; }
       @media (max-width: 490px) {
         .mainOfertas .imgOfertas .card-ofertas {
-          max-width: 145px;
+          max-width: 140px;
           justify-content: space-evenly; } }
       .mainOfertas .imgOfertas .card-ofertas .botones-talles-mujeres {
         text-align: center;
@@ -629,7 +630,7 @@ header {
         .mainOfertas .imgOfertas .card-ofertas {
           max-width: 120px;
           margin-right: 5px;
-          height: 90%; }
+          height: 80%; }
           .mainOfertas .imgOfertas .card-ofertas img {
             max-height: 115px;
             object-fit: cover; }
@@ -666,7 +667,12 @@ header {
               .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(3) {
                 background-color: green; }
               .mainOfertas .imgOfertas .card-ofertas .boton-list-colors .list-group-colors .round-button:nth-child(4) {
-                background-color: purple; } }
+                background-color: purple; }
+          .mainOfertas .imgOfertas .card-ofertas .botones-talles-mujeres .talles-mujeres {
+            padding: 5px 3px;
+            border-radius: 20%;
+            font-size: 14px;
+            font-weight: 600; } }
 
 .navbar-principal-ofertas {
   grid-area: navbar-principal;

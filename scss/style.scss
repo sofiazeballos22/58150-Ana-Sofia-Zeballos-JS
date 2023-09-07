@@ -892,6 +892,7 @@
             background-color: #b38e98;
             border-radius: 5%;
             overflow: hidden;
+            max-height: 490px;
 
 
             .card-title {
@@ -926,7 +927,7 @@
             
 
             @media (max-width:490px) {
-                max-width: 145px;
+                max-width: 140px;
                 justify-content: space-evenly;
             } 
 
@@ -957,7 +958,7 @@
             .card-ofertas {
                 max-width: 120px;
                 margin-right: 5px;
-                height: 90%;
+                height: 80%;
 
 
                 img {
@@ -1026,6 +1027,14 @@
                             background-color: purple;
                         }
                     }
+                }
+                .botones-talles-mujeres {
+                    .talles-mujeres {
+                        padding: 5px 3px;
+                        border-radius: 20%;
+                        font-size: 14px;
+                        font-weight: 600;
+                       }   
                 }
             }    
         }
