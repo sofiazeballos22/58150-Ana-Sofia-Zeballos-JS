@@ -32,15 +32,11 @@
         <nav class="nav1">
           <ul class="listado1">
             <li class="boton">
-              <a href="../secciones/registrarse.html" target="_top"
-                ><img
-                  src="../image/person-circle.svg"
-                  alt="logousuario"
-                  style="height: 25px; width: 25px"
-              /></a>
+              <a href="./registrarse.html" target="_top" id="registrar-usuario-2"
+                >Registrarse</a>
             </li>
             <li class="boton">
-              <a href="../secciones/cupones.html"
+              <a href="./secciones/cupones.html"
                 ><img
                   src="../image/gift.svg"
                   alt="cupones"
@@ -48,7 +44,7 @@
               /></a>
             </li>
             <li class="boton">
-              <a href="../secciones/carrito.html"
+              <a href="./secciones/carrito.html"
                 ><img
                   src="../image/cart3 (1).svg"
                   alt="compras"
@@ -190,39 +186,67 @@
         </nav>
       </div>
     </header>
-    <main class="registro-usuario">
+    <main class="main-registro">
       <h3>Registro de Usuario</h3>
-    <div>
-      <form action="/procesar_registro" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
+      <div class="registro-usuario">
+        <form
+          id="formulario-registro-usuarios"
+          action="/procesar_registro"
+          method="post"
+        >
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+          <label for="correo">Correo Electrónico:</label>
+          <input
+            type="email"
+            id="correo"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            required
+          /><br />
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required />
+          <label for="dni">DNI:</label>
+          <input
+            type="text"
+            id="dni"
+            pattern="[0-9]{7,8}"
+            title="Debe ser un número de 7 u 8 dígitos"
+            required
+          /><br />
 
-        <label for="confirm_password">Confirmar Contraseña:</label>
-        <input
-          type="password"
-          id="confirm_password"
-          name="confirm_password"
-          required
-        />
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required />
 
-        <label for="domicilio">Domicilio</label>
-        <input type="domicilio" name="domicilio" id="domicilio" required />
+          <label for="confirm_password">Confirmar Contraseña:</label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            required
+          />
 
-        <label for="localidad">Localidad</label>
-        <input type="localidad" name="localidad" id="localidad" required />
+          <label for="pais">País:</label>
+          <select id="pais" onchange="mostrarProvincias()">
+            <option value="">Selecciona un país</option>
+            <!-- Aquí se cargarán los países dinámicamente --></select
+          ><br />
 
-        <label for="celular">Número de contacto</label>
-        <input type="celular" name="celular" id="celular" required />
+          <label for="provincia">Provincia:</label>
+          <select id="provincia" disabled>
+            <option value="">Selecciona una provincia</option>
+            <!-- Las provincias se cargarán aquí después de seleccionar un país --></select
+          ><br />
 
-        <input type="submit" value="Registrarse" />
-      </form>
-    </div>
+          <label for="domicilio">Domicilio</label>
+          <input type="domicilio" name="direccion" id="direccion" required />
+
+          <label for="celular">Número de contacto</label>
+          <input type="celular" name="celular" id="celular" required />
+
+          <button type="submit" id="registrar-usuario">Registrarse</button>
+        </form>
+      </div>
     </main>
 
     <footer class="footer">
@@ -259,15 +283,13 @@
         </div>
       </section>
       <section class="mapa">
+        <p>Encontranos en Barrio los Pinos</p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.269342564612!2d-65.20138802573736!3d-26.799551176714736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d796a405b79%3A0xf2588ff7da88532e!2sbarrio%20los%20pinos!5e0!3m2!1ses!2sar!4v1688843629565!5m2!1ses!2sar"
-          width="250px"
-          height="200px"
           style="border: 0"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <p>Encontranos en Barrio los Pinos</p>
         <p>Ildefonso de las Muñecas 2357, San Miguel de Tucumán</p>
       </section>
       <div class="zonadescarga">
@@ -286,6 +308,7 @@
         <img src="../image/icons8-mercado-pago.svg" alt="mercadopago" />
         <img src="../image/bank.svg" style="height: 30px" alt="transferencia" />
       </div>
+      <!-- Enlace de WhatsApp con el ícono -->
       <a
         href="https://wa.me/NUMERO_DE_TELEFONO"
         class="whatsapp-icon"
@@ -299,5 +322,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

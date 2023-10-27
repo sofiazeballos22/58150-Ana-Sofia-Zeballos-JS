@@ -580,7 +580,7 @@
         font-size: 14px;
         
         }
-    }
+        }
       
         .card-img-top-cat {
             object-fit: cover;
@@ -645,7 +645,7 @@
         }
 
         @media (max-width:750px) {
-            max-width: 100px;
+            max-width: 105px;
                 max-height: 100%;
                 gap: 1px;
             
@@ -662,10 +662,7 @@
             }
 
 
-            .list-group-item {
-                display: none;
-            }
-
+         
             
             .boton-list-colors {
                 display: block;
@@ -703,7 +700,38 @@
                   .round-button:nth-child(5) {
                     background-color: purple;
                 }
+
+                @media (max-width: 750px) {
+                    display: none;
+                    
+                }
             }
+
+        }
+
+        @media  (max-width: 490px) {
+    
+               max-width: 140px;
+                justify-content: space-evenly;
+        
+                .botones-talles-mujeres-2 {
+
+
+                    div {
+                        text-align: center;
+                        justify-content: space-evenly;
+                        display: flex;
+                        }
+                    }
+            
+                .boton-list-colors {
+                    display: block;
+                }
+
+                .list-group-item {
+                    display: none;
+                }
+            
         }
         
     }
@@ -711,17 +739,17 @@
   
   
 
-  .productos {
+    .productos {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       
-    
 
       @media (max-width: 750px) {
         gap: 5px;
     }
-}
+
+  }
   
 
   /* Modificando el main de categorias */
@@ -1382,12 +1410,29 @@
         }
     }
 
-    .registro-usuario {
-        display: flex;
-        flex-direction: column;
-        
-        div {
-            
+
+    .main-registro {
+
+        h3 {
+            text-align: center;
         }
+        
+        .registro-usuario {
+            display: flex;
+           justify-content: center;
+
+        }
+
+        #formulario-registro-usuarios {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            text-align: center;
+          
+        }
+        
     }
    
+   
+
+    
