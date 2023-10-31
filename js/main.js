@@ -158,7 +158,7 @@ formulario.addEventListener("submit", function (event) {
         personasRegistradas.push(nuevaPersona);
 
         // Guarda la información en localStorage
-        sessionStorageStorage.setItem('usuarioRegistrado', JSON.stringify(nuevaPersona));
+        sessionStorage.setItem('usuarioRegistrado', JSON.stringify(nuevaPersona));
 
         // Mostrar SweetAlert 2 para confirmación
         Swal.fire({
