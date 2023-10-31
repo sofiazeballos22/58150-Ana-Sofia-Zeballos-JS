@@ -186,7 +186,7 @@ formulario.addEventListener("submit", function (event) {
 
 // Actualiza el enlace en el navbar con el nombre del usuario
 const enlaceNavbar = document.getElementById("registrar-usuario-2");
-const usuarioRegistrado = JSON.parse(sessionStorageStorage.getItem('usuarioRegistrado'));
+const usuarioRegistrado = JSON.parse(sessionStorage.getItem('usuarioRegistrado'));
 
 if (enlaceNavbar && usuarioRegistrado) {
     enlaceNavbar.textContent = usuarioRegistrado.nombre;
