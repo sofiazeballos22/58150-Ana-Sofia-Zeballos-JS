@@ -56,12 +56,13 @@
               /></a>
             </li>
             <li class="boton">
-              <a href="../secciones/carrito.html"
+              <a id="btnCarrito" href="../secciones/carrito.html"
                 ><img
                   src="../image/cart3 (1).svg"
                   alt="compras"
                   style="height: 25px; width: 25px"
               /></a>
+              <span class="badge-badge-dark" id="contadorCarrito"></span>
             </li>
           </ul>
         </nav>
@@ -218,6 +219,82 @@
             class="accordion-collapse collapse"
             data-bs-parent="#accordionFlushExample"
           >
+            <div>
+              <label for="filtroCategorias">Filtrar por categoría:</label>
+              <select id="filtroCategorias">
+                <option value="Todos">Todos</option>
+                <option value="Conjuntos">Conjuntos</option>
+                <option value="Trajes de baño">Trajes de baño</option>
+                <option value="Medias">Medias</option>
+                <option value="Packs de bombachas">Packs de bombachas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Agrega otras categorías aquí -->
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">SubTotal</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="bodyCarrito">
+                        <th></th>
+                        <td colspan="2">Total</td>
+                        <td id=></td>
+                    </tbody>
+                  </table>
+            </div>
+            <button id= "btnVaciarCarrito" type="button" class="btn btn-danger">Vaciar Carrito</button> 
+            <div id="alertCompra" style="display:none" class="alert alert-primary" role="alert">
+                Compra Finalizada
+              </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button id="btnFinalizar" type="button" class="btn btn-primary">Finalizar Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+      <div class="productos"></div>
+      
+      <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Mujeres
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
             <div class="accordion-body">
               <button class="boton-categoria">Conjuntos</button>
               <button class="boton-categoria">Trajes de baño</button>
@@ -276,9 +353,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="productos">
-        <div class="card" style="width: 11rem">
+        <!-- <div class="card" style="width: 11rem">
           <img
             src="../image/conjunto-baige.jpg"
             class="card-img-top-cat"
@@ -439,7 +516,7 @@
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </main>
 
@@ -516,6 +593,10 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/tienda.js"></script>
+    <script src="../js/globales.js"></script>
+    <script src="../js/carrito.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>

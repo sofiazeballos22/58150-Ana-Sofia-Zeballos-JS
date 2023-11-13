@@ -1,0 +1,74 @@
+[
+    { 
+     "idProducto": 1, 
+     "nombreProducto": "Conjunto Marcela Kaury + Accesorios", 
+     "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
+     "descripcionProducto": "Conjunto de microfibra y algodon ", 
+     "precio": 3945, 
+     "img": "conjunto-blanco-encaje.jpg" 
+    },
+    { 
+     "idProducto": 2, 
+     "nombreProducto": "Conjunto Marcela Kaury", 
+     "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
+     "descripcionProducto": "Conjunto de microfibra y algodon", 
+     "precio": 4300, "img": "Conjunto-colorRosa.webp" 
+    },
+    { "idProducto": 3,
+     "nombreProducto": "Pack x3 Tanga Less regulable", 
+     "marcaProducto": "Tiento",
+     "categoria": "packs de bombachas", 
+     "descripcionProducto": "Tanga Less Regulable ",
+     "precio": 4620, "img": "packs-de-less.webp"
+     },
+
+    { "idProducto": 4, 
+     "nombreProducto": "Malla Enteriza",
+     "marcaProducto": "Din Dan",
+     "categoria": "Trajes de baño", 
+     "descripcionProducto": "Traje de baño, dapreada, con taza soft", 
+     "precio": 5754, 
+     "img": "traje-de-baño-estiloGuccy.webp" 
+    },
+    { "idProducto": 5, 
+     "nombreProducto": "Malla enteriza cruzada", 
+     "marcaProducto": "Tiento", 
+     "categoria": "Trajes de baño", 
+     "descripcionProducto": "Traje de baño cruzado, escote en v con tazas ", 
+     "precio": 5442, 
+     "img": "Traje-de-baño-cruzado.webp" 
+    },
+    { "idProducto": 6, 
+     "nombreProducto": "Malla enteriza de niña", 
+     "marcaProducto": "Ukli", 
+     "categoria": "Trajes de baño", 
+     "descripcionProducto": "Malla enteriza para niña ", 
+     "precio": 2560, 
+     "img": "malla-enteriza-niña.webp" 
+    },
+    { "idProducto": 7,
+     "nombreProducto": "Conjunto de encaje y microfibra", 
+     "marcaProducto": "Marcela Kaury", 
+     "categoria": "Conjuntos",
+     "descripcionProducto": "Conjunto Marcela Kaury, de encaje y microfibra blanco", 
+     "precio": 3852,
+     "img": "conjunto-blanco-encaje.jpg" 
+    },
+    { "idProducto": 8,
+    "nombreProducto": "Medias soquetes de dama y niñas", 
+    "marcaProducto": "Dip", 
+    "categoria": "Medias",
+    "descripcionProducto": "Medias-soquetes de dama, %100 algodon, del talle 25 al 40", 
+    "precio": 3850,
+    "img": "soquetes-dama.webp" 
+   },
+   { "idProducto": 9,
+   "nombreProducto": "Conjunto de encaje y microfibra", 
+   "marcaProducto": "Kyros lenceria", 
+   "categoria": "Medias",
+   "descripcionProducto": "Medias de seda con brillos para dama", 
+   "precio": 3852,
+   "img": "medias-de-sada.webp" 
+  }
+
+]

@@ -1,3 +1,104 @@
+const tienda = new Tienda('Kyros Lencería', 'Barrio los Pinos, Idelfonso de las Muniecas 2554', 4885548, baseDeDatos);
+const carrito = new Carrito([]);
+tienda.listarProductos(tienda.baseDeDatos);
+verificarLocalStorage(carrito);
+
+$(document).ready(function () {
+    btnComprarOnClic(carrito);
+    eventosBotones(carrito);
+});
+
+class Producto {
+    constructor(idProducto, nombreProducto, marcaProducto, categoria, descripcionProducto, precio, img, cantidad) {
+        this.idProducto = idProducto;
+        this.nombreProducto = nombreProducto;
+        this.marcaProducto = marcaProducto;
+        this.categoria = categoria;
+        this.descripcionProducto = descripcionProducto;
+        this.precio = precio;
+        this.img = img;
+        this.cantidad= cantidad || 1;
+    }
+    agregarCantidad(valor){
+        this.cantidad += valor
+    }
+    subTotal(){
+        return this.cantidad * this.precio;
+    }
+    vaciarCantidad(){
+        this.cantidad = 1;
+    }
+    modificarCantidad(valor){
+        this.cantidad = valor
+    }
+}
+
+
+
+
+ /* <div class="productos">
+<div class="card" style="width: 11rem">
+  <img
+    src="../image/conjunto-baige.jpg"
+    class="card-img-top-cat"
+    alt="conjunto color beige"
+  />
+  <img
+    src="../image/conjunto-blanco-encaje.jpg"
+    class="card-img-top-cat2"
+    alt="conjunto blanco de encaje"
+  />
+  <div class="card-body">
+    <h5 class="card-title">Marcela Kaury</h5>
+    <p class="card-text">
+      Conjunto Marcela Kaury 70% algodon, 30% lycra
+    </p>
+    <p class="card-text-2">Conjunto 70% algodon, 30% lycra</p>
+  </div>
+  <ul
+    class="list-group.list-group-flush"
+    style="padding-left: 2px; padding-right: 2px"
+  >
+    <li class="list-group-item"></li>
+    <div class="botones-talles-mujeres-2">
+      Talles disponibles
+      <div>
+        <button type="button" class="talles-mujeres-2">90</button>
+        <button type="button" class="talles-mujeres-2">105</button>
+        <button type="button" class="talles-mujeres-2">95</button>
+        <button type="button" class="talles-mujeres-2">100</button>
+      </div>
+    </div>
+    <li class="list-group-item">
+      Colores disponibles
+      <div>
+        <button type="button" class="btn btn-primary"></button>
+        <button type="button" class="btn btn-secondary"></button>
+        <button type="button" class="btn btn-success"></button>
+        <button type="button" class="btn btn-danger"></button>
+        <button type="button" class="btn btn-warning"></button>
+      </div>
+    </li>
+  </ul>
+  <ul class="boton-list-colors">
+    <li class="list-group-colors">
+      <p>Colores disponibles</p>
+      <button type="button" class="round-button"></button>
+      <button type="button" class="round-button"></button>
+      <button type="button" class="round-button"></button>
+      <button type="button" class="round-button"></button>
+    </li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+*/
+
+
+
 // Objeto JavaScript con países de América Latina
 var paisesLatinoamerica = {
     "Argentina": [ "Buenos Aires",
@@ -173,7 +274,7 @@ formulario.addEventListener("submit", function (event) {
 
                 // Actualiza el enlace en el navbar con el nombre del usuario
                 const enlaceNavbar = document.getElementById("registrar-usuario-2");
-                enlaceNavbar.textContent = nombre; // Personaliza el texto como desees
+                enlaceNavbar.textContent = nombre; // 
             }
         });
     }
@@ -190,4 +291,91 @@ const usuarioRegistrado = JSON.parse(sessionStorage.getItem('usuarioRegistrado')
 
 if (enlaceNavbar && usuarioRegistrado) {
     enlaceNavbar.textContent = usuarioRegistrado.nombre;
+}
+
+
+
+
+
+
+function btnComprarOnClic(carrito) {
+    let botones = document.getElementsByClassName('btnComprar');
+    for (const boton of botones) {
+        boton.onclick = function () {
+            let producto = tienda.buscarProductoPorId(boton.id);
+            carrito.agregarAlCarrito(producto);
+        }
+    }
+}
+
+function selectFiltroOnChange(carrito) {
+    let filtroProductos = document.getElementById('filtroCategorias')
+    filtroProductos.addEventListener('change', function () {
+        if (this.value != "Todos") {
+            tienda.filtrarProductoPorCategoria(this.value, carrito);
+        } else {
+            tienda.listarProductos(tienda.baseDeDatos, carrito);
+        }
+    })
+}
+
+function verificarLocalStorage(carrito) {
+    if ('Carrito' in localStorage) {
+        const productosStorage = JSON.parse(localStorage.getItem("Carrito"));
+        for (const producto of productosStorage) {
+            const found = baseDeDatos.find(p => p.idProducto == producto.idProducto)
+            found.modificarCantidad(producto.cantidad)
+            carrito.productos.push(found);
+        }
+    } else {
+        carrito.productos = [];
+    }
+    let contadorCarrito = document.getElementById("contadorCarrito");
+    contadorCarrito.innerHTML = contadorCarritos();
+}
+function carritoOnClick(carrito) {
+    let btnCarrito = document.getElementById('btnCarrito')
+    btnCarrito.onclick = function () {
+        carrito.listarProductos(carrito)
+    }
+}
+
+function VaciarCarritoOnClick(carrito) {
+    let btnVaciar = document.getElementById('btnVaciarCarrito')
+    btnVaciar.onclick = function () {
+        localStorage.clear();
+        for (const producto of carrito.productos) {
+            producto.vaciarCantidad()
+        }
+        carrito.productos = [];
+        let contadorCarrito = document.getElementById("contadorCarrito");
+        contadorCarrito.innerHTML = 0;
+        carrito.listarProductos();
+
+    }
+}
+
+function eventosBotones(carrito) {
+    selectFiltroOnChange(carrito);
+    carritoOnClick(carrito);
+    VaciarCarritoOnClick(carrito);
+}
+
+$("#btnFinalizar").click(enviarEmail);
+
+function enviarEmail(e) {
+    e.preventDefault();
+    $.post("https://jsonplaceholder.typicode.com/posts", JSON.stringify(carrito.productos), function (respuesta, estado) {
+        if (estado == "success") {
+            $("#alertCompra").fadeIn(2000).fadeOut(2000);
+            localStorage.clear();
+            for (const producto of carrito.productos) {
+                producto.vaciarCantidad()
+            }
+            carrito.productos = [];
+            let contadorCarrito = document.getElementById("contadorCarrito");
+            contadorCarrito.innerHTML = 0;
+            carrito.listarProductos();
+        }
+    });
 }
