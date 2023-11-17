@@ -1,9 +1,9 @@
 [
     { 
      "idProducto": 1, 
-     "nombreProducto": "Conjunto Marcela Kaury + Accesorios", 
+     "nombreProducto": "Conjunto Marcela Kaury", 
      "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
-     "descripcionProducto": "Conjunto de microfibra y algodon ", 
+     "descripcionProducto": "Conjunto de encaje y algodón", 
      "precio": 3945, 
      "img": "conjunto-blanco-encaje.jpg" 
     },
@@ -11,14 +11,14 @@
      "idProducto": 2, 
      "nombreProducto": "Conjunto Marcela Kaury", 
      "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
-     "descripcionProducto": "Conjunto de microfibra y algodon", 
+     "descripcionProducto": "Conjunto de microfibra y algodón", 
      "precio": 4300, "img": "Conjunto-colorRosa.webp" 
     },
     { "idProducto": 3,
      "nombreProducto": "Pack x3 Tanga Less regulable", 
      "marcaProducto": "Tiento",
      "categoria": "packs de bombachas", 
-     "descripcionProducto": "Tanga Less Regulable ",
+     "descripcionProducto": "Tanga Less Regulable, de microfibra algodón",
      "precio": 4620, "img": "packs-de-less.webp"
      },
 
@@ -47,23 +47,23 @@
      "img": "malla-enteriza-niña.webp" 
     },
     { "idProducto": 7,
-     "nombreProducto": "Conjunto de encaje y microfibra", 
+     "nombreProducto": "Conjunto Marcela Kaury", 
      "marcaProducto": "Marcela Kaury", 
      "categoria": "Conjuntos",
-     "descripcionProducto": "Conjunto Marcela Kaury, de encaje y microfibra blanco", 
+     "descripcionProducto": "Conjunto Marcela Kaury, de seda satinada y algodón blanco", 
      "precio": 3852,
-     "img": "conjunto-blanco-encaje.jpg" 
+     "img": "conjunto-rojo-satinado.jpg" 
     },
     { "idProducto": 8,
     "nombreProducto": "Medias soquetes de dama y niñas", 
     "marcaProducto": "Dip", 
     "categoria": "Medias",
-    "descripcionProducto": "Medias-soquetes de dama, %100 algodon, del talle 25 al 40", 
+    "descripcionProducto": "Medias-soquetes de dama, %100 algodón, del talle 25 al 40", 
     "precio": 3850,
     "img": "soquetes-dama.webp" 
    },
    { "idProducto": 9,
-   "nombreProducto": "Conjunto de encaje y microfibra", 
+   "nombreProducto": "Medias red con brillos", 
    "marcaProducto": "Kyros lenceria", 
    "categoria": "Medias",
    "descripcionProducto": "Medias de seda con brillos para dama", 

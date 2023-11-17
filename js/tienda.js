@@ -38,7 +38,7 @@ class Tienda {
                 <p class="card-text">${producto.descripcionProducto}</p>
                 <p class="card-text-2">${producto.descripcionProducto}</p>
                 <ul class="list-group list-group-flush" style="padding-left: 2px; padding-right: 2px">
-                    <li class="list-group-item"></li>
+                    <li class="list-group-item" style="display:none"></li> 
                     <div class="botones-talles-mujeres-2">
                         Talles disponibles
                         <div>
@@ -69,10 +69,7 @@ class Tienda {
                         <button type="button" class="round-button"></button>
                     </li>
                 </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
+
                 <h4>$${producto.precio}</h4>
                 <button id="${producto.idProducto}" type="button" class="btn btn-primary btnComprar">Comprar</button>
             `;
