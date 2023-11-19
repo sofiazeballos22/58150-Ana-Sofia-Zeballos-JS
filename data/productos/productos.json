@@ -2,24 +2,29 @@
     { 
      "idProducto": 1, 
      "nombreProducto": "Conjunto Marcela Kaury", 
-     "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
+     "marcaProducto": "Marcela Kaury",
+     "categoria": "Conjuntos", 
      "descripcionProducto": "Conjunto de encaje y algodón", 
      "precio": 3945, 
-     "img": "conjunto-blanco-encaje.jpg" 
+     "img": "conjunto-blanco-encaje.jpg",
+     "cantidad":"3"
     },
     { 
      "idProducto": 2, 
      "nombreProducto": "Conjunto Marcela Kaury", 
-     "marcaProducto": "Marcela Kaury", "categoria": "Conjuntos", 
+     "marcaProducto": "Marcela Kaury",
+     "categoria": "Conjuntos", 
      "descripcionProducto": "Conjunto de microfibra y algodón", 
-     "precio": 4300, "img": "Conjunto-colorRosa.webp" 
+     "precio": 4300, "img": "Conjunto-colorRosa.webp",
+     "cantidad":"3"
     },
     { "idProducto": 3,
      "nombreProducto": "Pack x3 Tanga Less regulable", 
      "marcaProducto": "Tiento",
-     "categoria": "packs de bombachas", 
+     "categoria": "Packs de bombachas", 
      "descripcionProducto": "Tanga Less Regulable, de microfibra algodón",
-     "precio": 4620, "img": "packs-de-less.webp"
+     "precio": 4620, "img": "packs-de-less.webp",
+     "cantidad":"7"
      },
 
     { "idProducto": 4, 
@@ -28,7 +33,8 @@
      "categoria": "Trajes de baño", 
      "descripcionProducto": "Traje de baño, dapreada, con taza soft", 
      "precio": 5754, 
-     "img": "traje-de-baño-estiloGuccy.webp" 
+     "img": "traje-de-baño-estiloGuccy.webp",
+     "cantidad":"5" 
     },
     { "idProducto": 5, 
      "nombreProducto": "Malla enteriza cruzada", 
@@ -36,7 +42,8 @@
      "categoria": "Trajes de baño", 
      "descripcionProducto": "Traje de baño cruzado, escote en v con tazas ", 
      "precio": 5442, 
-     "img": "Traje-de-baño-cruzado.webp" 
+     "img": "Traje-de-baño-cruzado.webp",
+     "cantidad":"5"
     },
     { "idProducto": 6, 
      "nombreProducto": "Malla enteriza de niña", 
@@ -44,7 +51,8 @@
      "categoria": "Trajes de baño", 
      "descripcionProducto": "Malla enteriza para niña ", 
      "precio": 2560, 
-     "img": "malla-enteriza-niña.webp" 
+     "img": "malla-enteriza-niña.webp",
+     "cantidad":"9"
     },
     { "idProducto": 7,
      "nombreProducto": "Conjunto Marcela Kaury", 
@@ -52,7 +60,8 @@
      "categoria": "Conjuntos",
      "descripcionProducto": "Conjunto Marcela Kaury, de seda satinada y algodón blanco", 
      "precio": 3852,
-     "img": "conjunto-rojo-satinado.jpg" 
+     "img": "conjunto-rojo-satinado.jpg",
+     "cantidad":"4"
     },
     { "idProducto": 8,
     "nombreProducto": "Medias soquetes de dama y niñas", 
@@ -60,7 +69,8 @@
     "categoria": "Medias",
     "descripcionProducto": "Medias-soquetes de dama, %100 algodón, del talle 25 al 40", 
     "precio": 3850,
-    "img": "soquetes-dama.webp" 
+    "img": "soquetes-dama.webp",
+    "cantidad":"10"
    },
    { "idProducto": 9,
    "nombreProducto": "Medias red con brillos", 
@@ -68,7 +78,9 @@
    "categoria": "Medias",
    "descripcionProducto": "Medias de seda con brillos para dama", 
    "precio": 3852,
-   "img": "medias-de-sada.webp" 
+   "img": "medias-de-sada.webp",
+   "cantidad":"6"
+   
   }
 
 ]

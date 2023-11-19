@@ -6,7 +6,7 @@ class Tienda {
         this.baseDeDatos = baseDeDatos;
     }
     filtrarProductoPorCategoria(valor, carrito) {
-        let espacioProductos = document.getElementsByClassName("contenedorProductos")
+        let espacioProductos = document.getElementsByClassName("productos")
         espacioProductos[0].innerHTML = "";
         const encontrado = this.baseDeDatos.filter(producto => producto.categoria == valor);
         this.listarProductos(encontrado, carrito);
@@ -24,7 +24,7 @@ class Tienda {
         for (const producto of baseDeDatos) {
             let card = document.createElement("div");
             card.className = "card";
-    
+
             let imagen = document.createElement("img");
             imagen.src = `../image/${producto.img}`;
             imagen.className = "card-img-top-cat";
@@ -38,7 +38,8 @@ class Tienda {
                 <p class="card-text">${producto.descripcionProducto}</p>
                 <p class="card-text-2">${producto.descripcionProducto}</p>
                 <ul class="list-group list-group-flush" style="padding-left: 2px; padding-right: 2px">
-                    <li class="list-group-item" style="display:none"></li> 
+                    <li class="list-group-item" style="display:none"></li>
+                     
                     <div class="botones-talles-mujeres-2">
                         Talles disponibles
                         <div>
@@ -69,7 +70,6 @@ class Tienda {
                         <button type="button" class="round-button"></button>
                     </li>
                 </ul>
-
                 <h4>$${producto.precio}</h4>
                 <button id="${producto.idProducto}" type="button" class="btn btn-primary btnComprar">Comprar</button>
             `;
