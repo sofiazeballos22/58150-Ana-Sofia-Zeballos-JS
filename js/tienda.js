@@ -11,6 +11,17 @@ class Tienda {
         const encontrado = this.baseDeDatos.filter(producto => producto.categoria == valor);
         this.listarProductos(encontrado, carrito);
     };
+        // Método para manejar los eventos de los botones de talles y colores
+        manejarEventosTallesColores() {
+            const botonesTallesColores = document.querySelectorAll('.talles-mujeres-2, .btn');
+    
+            botonesTallesColores.forEach((boton) => {
+                boton.addEventListener('click', function() {
+                    botonesTallesColores.forEach((b) => b.classList.remove('selector'));
+                    this.classList.add('selector');
+                });
+            });
+        }
 
     buscarProductoPorId(valorId) {
         const encontrado = this.baseDeDatos.find(producto => producto.idProducto == valorId);
@@ -43,21 +54,35 @@ class Tienda {
                     <div class="botones-talles-mujeres-2">
                         Talles disponibles
                         <div>
+                        ${
+                            producto.categoria === 'Medias' ?
+                            // Si es un producto de categoría "Medias"
+                            `
+                            <button type="button" class="talles-mujeres-2">25</button>
+                            <button type="button" class="talles-mujeres-2">30</button>
+                            <button type="button" class="talles-mujeres-2">35</button>
+                            <button type="button" class="talles-mujeres-2">40</button>
+                            `
+                            :
+                            // Si es cualquier otra categoría de producto
+                            `
                             <button type="button" class="talles-mujeres-2">90</button>
-                            <button type="button" class="talles-mujeres-2">105</button>
                             <button type="button" class="talles-mujeres-2">95</button>
                             <button type="button" class="talles-mujeres-2">100</button>
+                            <button type="button" class="talles-mujeres-2">105</button>
+                            `
+                        }
                         </div>
                     </div>
     
                     <li class="list-group-item">
                         Colores disponibles
                         <div>
-                            <button type="button" class="btn btn-primary"></button>
-                            <button type="button" class="btn btn-secondary"></button>
-                            <button type="button" class="btn btn-success"></button>
-                            <button type="button" class="btn btn-danger"></button>
-                            <button type="button" class="btn btn-warning"></button>
+                            <button type="button" class="btn style= btn-primary"></button>
+                            <button type="button" class="btn style= btn-secondary"></button>
+                            <button type="button" class="btn style= btn-info"></button>
+                            <button type="button" class="btn style= btn-danger"></button>
+                            <button type="button" class="btn style= btn-warning"></button>
                         </div>
                     </li>
                 </ul>
@@ -74,6 +99,8 @@ class Tienda {
                 <button id="${producto.idProducto}" type="button" class="btn btn-primary btnComprar">Comprar</button>
             `;
 
+           
+
             cardBody.querySelector('.btnComprar').onclick = function () {
                 carrito.agregarAlCarrito(producto);
             };
@@ -83,6 +110,10 @@ class Tienda {
             espacioProductos.appendChild(card);
             btnComprarOnClic(carrito);
         }
+
+     // Una vez que se han creado todos los productos, se asignan los eventos
+     this.manejarEventosTallesColores();
+        
     }
     
 } 

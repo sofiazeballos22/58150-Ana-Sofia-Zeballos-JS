@@ -594,6 +594,11 @@ header {
   }
 }
 
+.selector {
+  border: 4px solid #d6a1cf;
+  border-radius: 8px;
+}
+
 .productos {
   display: flex;
   flex-wrap: wrap;

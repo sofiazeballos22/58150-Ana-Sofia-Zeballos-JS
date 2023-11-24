@@ -7,7 +7,14 @@ $(document).ready(function () {
     btnComprarOnClic(carrito);
     eventosBotones(carrito);
 });
-
+document.addEventListener('DOMContentLoaded', function () {
+    const btnCarrito = document.getElementById('btnCarrito');
+  
+    btnCarrito.addEventListener('click', function () {
+      const myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+      myModal.show();
+    });
+  });
 class Producto {
     constructor(idProducto, nombreProducto, marcaProducto, categoria, descripcionProducto, precio, img, cantidad) {
         this.idProducto = idProducto;
@@ -33,69 +40,6 @@ class Producto {
     }
 }
 
-
-
-
- /* <div class="productos">
-<div class="card" style="width: 11rem">
-  <img
-    src="../image/conjunto-baige.jpg"
-    class="card-img-top-cat"
-    alt="conjunto color beige"
-  />
-  <img
-    src="../image/conjunto-blanco-encaje.jpg"
-    class="card-img-top-cat2"
-    alt="conjunto blanco de encaje"
-  />
-  <div class="card-body">
-    <h5 class="card-title">Marcela Kaury</h5>
-    <p class="card-text">
-      Conjunto Marcela Kaury 70% algodon, 30% lycra
-    </p>
-    <p class="card-text-2">Conjunto 70% algodon, 30% lycra</p>
-  </div>
-  <ul
-    class="list-group.list-group-flush"
-    style="padding-left: 2px; padding-right: 2px"
-  >
-    <li class="list-group-item"></li>
-    <div class="botones-talles-mujeres-2">
-      Talles disponibles
-      <div>
-        <button type="button" class="talles-mujeres-2">90</button>
-        <button type="button" class="talles-mujeres-2">105</button>
-        <button type="button" class="talles-mujeres-2">95</button>
-        <button type="button" class="talles-mujeres-2">100</button>
-      </div>
-    </div>
-    <li class="list-group-item">
-      Colores disponibles
-      <div>
-        <button type="button" class="btn btn-primary"></button>
-        <button type="button" class="btn btn-secondary"></button>
-        <button type="button" class="btn btn-success"></button>
-        <button type="button" class="btn btn-danger"></button>
-        <button type="button" class="btn btn-warning"></button>
-      </div>
-    </li>
-  </ul>
-  <ul class="boton-list-colors">
-    <li class="list-group-colors">
-      <p>Colores disponibles</p>
-      <button type="button" class="round-button"></button>
-      <button type="button" class="round-button"></button>
-      <button type="button" class="round-button"></button>
-      <button type="button" class="round-button"></button>
-    </li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-
-*/
 
 
 
@@ -320,8 +264,8 @@ function selectFiltroOnChange(carrito) {
 }
 
 function verificarLocalStorage(carrito) {
-    if ('Carrito' in localStorage) {
-        const productosStorage = JSON.parse(localStorage.getItem("Carrito"));
+    if ('carrito' in localStorage) {
+        const productosStorage = JSON.parse(localStorage.getItem("carrito"));
         for (const producto of productosStorage) {
             const found = baseDeDatos.find(p => p.idProducto == producto.idProducto)
             found.modificarCantidad(producto.cantidad)
@@ -335,10 +279,12 @@ function verificarLocalStorage(carrito) {
 }
 function carritoOnClick(carrito) {
     let btnCarrito = document.getElementById('btnCarrito')
+    console.log(carrito)
     btnCarrito.onclick = function () {
         carrito.listarProductos(carrito)
     }
 }
+
 
 function VaciarCarritoOnClick(carrito) {
     let btnVaciar = document.getElementById('btnVaciarCarrito')
@@ -378,4 +324,9 @@ function enviarEmail(e) {
             carrito.listarProductos();
         }
     });
+
+
+
+
+    
 }

@@ -1,0 +1,437 @@
+@charset "UTF-8";
+.comienzo {
+  background-color: #eec3c9;
+  margin: 0%;
+  padding: 0%;
+}
+
+.marketing {
+  grid-area: marketing;
+  background-color: lightpink;
+  order: -1;
+  width: auto;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marketing h3 {
+  font-size: 18px;
+  position: sticky;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: 2fr 3fr;
+  grid-template-areas: "marketing marketing" "titulo encabezado1" "navbar-principal navbar-principal";
+}
+
+.encabezado1 {
+  grid-area: encabezado1;
+  display: flex;
+  flex-direction: row;
+  background-color: #694a50;
+}
+
+.titulo {
+  grid-area: titulo;
+  width: 100%;
+  height: 4rem;
+  justify-items: center;
+  display: contents;
+}
+
+.principal {
+  height: 100%;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.nav1 .listado1 {
+  width: 40%;
+  height: 3rem;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2.1rem;
+}
+
+.navbar-principal {
+  grid-area: navbar-principal;
+  width: 100%;
+  height: 4rem;
+  background-color: #9c7580;
+}
+
+.nav2 {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.nav2 ul {
+  width: 100%;
+  height: 50%;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav2 ul a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.portada {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-areas: "img1 " "publicidad" "carrusel";
+  justify-items: center;
+}
+
+.img1 {
+  grid-area: img1;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.imagen1_portada {
+  border-style: double;
+  border-color: rgb(134, 86, 86);
+}
+
+.imagen2_portada {
+  border-style: double;
+  border-color: rgb(134, 86, 86);
+}
+
+.carrusel {
+  grid-area: carrusel;
+  display: flex;
+  width: 60%;
+  height: 100%;
+}
+
+.carrusel .photo {
+  display: flex;
+  width: 1rem;
+  flex-grow: 5;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.carrusel .photo:hover {
+  cursor: crosshair;
+  width: 30%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.publicidad {
+  grid-area: publicidad;
+  order: 1.1;
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  border-style: dotted;
+  font-family: Verdana, sans-serif;
+}
+
+.footer {
+  margin-top: 3rem;
+  display: grid;
+  /*  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-rows: 2fr 2fr;
+  grid-area: "redessociales infodueña"
+              "zonadescarga"
+              "mapa mapa";*/
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "infodueña infodueña infodueña" "redessociales redessociales mapa" "zonadescarga zonadescarga zonadescarga" "metodopago metodopago metodopago";
+  background-color: #ff8198;
+}
+
+.zonadescarga {
+  grid-area: zonadescarga;
+  margin: 10px;
+}
+
+.infodueña {
+  grid-area: infodueña;
+  order: 2;
+  position: relative;
+  /* Agregar posición relativa */
+  text-align: center;
+  /* Centrar el texto horizontalmente */
+}
+
+.redessociales {
+  grid-area: redessociales;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background: linear-gradient(45deg, #eec3c9, #9c7580, #694a50);
+  background-size: 100%;
+  border-radius: 15px;
+}
+
+.mapa {
+  grid-area: mapa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background: blanchedalmond;*/
+  /* Ajusta los márgenes y relleno según sea necesario */
+}
+
+.mapa iframe {
+  max-width: 100%;
+  /* Asegura que el mapa se ajuste al ancho del contenedor */
+  height: auto;
+  /* Permite que el alto se ajuste automáticamente */
+  border: 0;
+}
+
+.mapa p {
+  font-size: 18px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.metodopago {
+  grid-area: metodopago;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos solo para las imágenes de MercadoPago */
+.metodopago img {
+  height: 40px;
+  margin: 0 30px;
+  /* Ajusta el margen horizontal según tus preferencias */
+}
+
+.namepag {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+}
+
+.name {
+  font-family: "Courgette", cursive;
+}
+
+.floating-button {
+  /* Estilos del botón */
+  position: fixed;
+  bottom: 10px;
+  /* Ajusta la distancia desde abajo */
+  right: 20px;
+  /* Ajusta la distancia desde la derecha */
+  width: 90px;
+  /* Ajusta el ancho del botón */
+  height: 90px;
+  /* Ajusta la altura del botón  */
+  border-radius: 100%;
+  /* Da forma de círculo al botón */
+  background-color: rosybrown;
+  z-index: 9999;
+  /* Asegura que el botón esté por encima de otros elementos */
+  /* Estilos adicionales para el botón */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comienzo2 {
+  margin: 0%;
+  padding: 0%;
+  background-color: #eec3c9;
+}
+
+.titulo2 {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  background-color: #694a50;
+}
+
+.nav3 {
+  width: 30rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: relative;
+}
+
+.nav3 ul {
+  width: 15rem;
+  height: 100%;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2.1rem;
+}
+
+.nav4 {
+  background-color: #9c7580;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: end;
+}
+
+.nav4 ul {
+  width: 50%;
+  height: 100%;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2.1rem;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav4 ul a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.redessociales p {
+  align-items: center;
+  text-align: center;
+  margin-top: -2px;
+}
+
+.parrafoenlace {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.enlaces {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.grid-categorias {
+  display: grid;
+  /*   grid-template-areas: "nav-categorias galeria-img"
+      "nav-categorias galeria-img";*/
+  grid-template-areas: "accordion productos-card" "accordion productos-card";
+  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+}
+
+.accordion {
+  grid-area: accordion;
+}
+
+.productos-card {
+  grid-area: productos-card;
+  display: flex;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* Cambio a nowrap para evitar envoltura */
+}
+
+.card {
+  width: calc(33.33% - 20px);
+  /* Ancho de cada tarjeta, con margen entre ellas */
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Modificando el main de categorias */
+.accordion-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.boton-categoria {
+  height: 4rem;
+  border-style: none;
+}
+
+.boton-categoria:hover {
+  background-color: #eec3c9;
+}
+
+.galeria-img {
+  background-color: antiquewhite;
+}
+
+/* Estilos para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
