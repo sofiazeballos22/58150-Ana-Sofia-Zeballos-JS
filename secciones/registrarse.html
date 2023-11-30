@@ -32,8 +32,12 @@
         <nav class="nav1">
           <ul class="listado1">
             <li class="boton">
-              <a href="./registrarse.html" target="_top" id="registrar-usuario-2"
-                >Registrarse</a>
+              <a
+                href="./registrarse.html"
+                target="_top"
+                id="registrar-usuario-2"
+                >Registrarse</a
+              >
             </li>
             <li class="boton">
               <a href="./secciones/cupones.html"
@@ -194,6 +198,7 @@
           action="/procesar_registro"
           method="post"
         >
+          <!-- Aquí van los campos del formulario -->
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
 
@@ -229,13 +234,13 @@
           <label for="pais">País:</label>
           <select id="pais" onchange="mostrarProvincias()">
             <option value="">Selecciona un país</option>
-            <!-- Aquí se cargarán los países dinámicamente --></select
+            <!-- Los países se cargarán dinámicamente aquí --></select
           ><br />
 
           <label for="provincia">Provincia:</label>
           <select id="provincia" disabled>
             <option value="">Selecciona una provincia</option>
-            <!-- Las provincias se cargarán aquí después de seleccionar un país --></select
+            <!-- Las provincias se cargarán dinámicamente aquí --></select
           ><br />
 
           <label for="domicilio">Domicilio</label>
@@ -322,7 +327,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/register.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

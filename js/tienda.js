@@ -28,11 +28,12 @@ class Tienda {
         return encontrado;
     };
 
-    listarProductos(baseDeDatos, carrito) {
-        let espacioProductos = document.getElementsByClassName("productos")[0];
+    listarProductos(encontrado, carrito) {
+        let espacioProductos = document.querySelector(".productos");
+       // let espacioProductos = document.getElementsByClassName("productos")[0];
         espacioProductos.innerHTML = "";
     
-        for (const producto of baseDeDatos) {
+        for (const producto of encontrado) {
             let card = document.createElement("div");
             card.className = "card";
 
@@ -96,19 +97,23 @@ class Tienda {
                     </li>
                 </ul>
                 <h4>$${producto.precio}</h4>
-                <button id="${producto.idProducto}" type="button" class="btn btn-primary btnComprar">Comprar</button>
+                <button id="${producto.idProducto}" type="button" class="btn btn-primary btnComprar">Agregar compra</button>
             `;
 
            
 
-            cardBody.querySelector('.btnComprar').onclick = function () {
+            cardBody.querySelector('.btnComprar').onclick = () => {
+                console.log(carrito); // Verificar el valor de carrito antes de agregarAlCarrito
                 carrito.agregarAlCarrito(producto);
             };
+            
+            // cardBody.querySelector('.btnComprar').onclick = function () {
+            //     carrito.agregarAlCarrito(producto);
+            // };
     
             card.appendChild(imagen);
             card.appendChild(cardBody);
             espacioProductos.appendChild(card);
-            btnComprarOnClic(carrito);
         }
 
      // Una vez que se han creado todos los productos, se asignan los eventos
